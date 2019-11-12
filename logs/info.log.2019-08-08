@@ -1,0 +1,19 @@
+2019-08-08 08:58:30,599 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-08-08 08:58:36,622 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-08-08 08:58:36,641 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-08-08 08:58:42,428 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-08-08 08:58:42,494 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-08-08 08:58:42,899 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-08-08 08:58:45,589 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//vipManage/getVip
+2019-08-08 08:58:54,130 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//vipManage/upNewsImg
+2019-08-08 08:58:55,243 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//vipManage/addOrUpdVip
+2019-08-08 08:58:55,728 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//vipManage/getVip
+2019-08-08 08:59:03,802 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//vipManage/delVip
+2019-08-08 08:59:03,849 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//vipManage/getVip
+2019-08-08 08:59:21,935 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//vipManage/upNewsImg
+2019-08-08 08:59:22,938 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//vipManage/addOrUpdVip
+2019-08-08 08:59:23,113 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//vipManage/getVip
+2019-08-08 09:13:16,349 [Thread-3] INFO  [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext] - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58ce9668: startup date [Wed Aug 07 18:03:02 CST 2019]; root of context hierarchy
+2019-08-08 09:13:16,352 [Thread-3] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Unregistering JMX-exposed beans on shutdown
+2019-08-08 09:13:16,352 [Thread-3] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Unregistering JMX-exposed beans
+2019-08-08 09:13:16,359 [Thread-3] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed

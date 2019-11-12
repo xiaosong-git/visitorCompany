@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.ParamsMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.Params">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="paramName" jdbcType="VARCHAR" property="paramName" />
+    <result column="paramText" jdbcType="VARCHAR" property="paramText" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  
+  <select id="findByParamName" parameterType="java.lang.String" resultType="java.lang.String">
+     select paramText
+     from tbl_params
+     where paramName = #{paramName}
+  </select>
+</mapper>

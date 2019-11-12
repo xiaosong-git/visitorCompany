@@ -1,0 +1,38 @@
+2019-07-10 15:20:56,186 [http-nio-8085-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-10 15:20:56,190 [http-nio-8085-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-10 15:20:56,217 [http-nio-8085-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2019-07-10 15:21:23,084 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-10 15:21:37,091 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-10 15:21:49,399 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-10 15:22:48,003 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-10 15:22:52,705 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-10 15:22:52,962 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-10 15:23:33,476 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-10 15:23:33,529 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-10 15:23:33,918 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-10 15:23:39,286 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyOper/getOrgPageOper
+2019-07-10 15:23:42,385 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-10 15:23:55,339 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companySection/findByAll
+2019-07-10 15:23:57,247 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-10 15:23:58,653 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companySection/findByAll
+2019-07-10 15:23:59,669 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-10 15:24:02,336 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companySection/findByPage
+2019-07-10 15:24:11,426 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyOper/getOrgPageOper
+2019-07-10 15:24:38,831 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyOper/getOrgPageOper
+2019-07-10 15:25:49,896 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-10 15:26:04,459 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-10 15:26:04,476 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-10 15:26:12,710 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-10 15:26:12,752 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-10 15:26:12,817 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-10 15:26:15,237 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-10 15:26:16,349 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-10 15:26:17,891 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-10 15:26:18,980 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyAuth/getRoleAuth
+2019-07-10 15:26:19,096 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyAuthRange/newGetAllMenu
+2019-07-10 15:26:22,704 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-10 15:26:46,983 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/addOrEdit
+2019-07-10 15:26:47,030 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-10 15:27:01,082 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-10 15:27:02,385 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-10 15:48:00,545 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole

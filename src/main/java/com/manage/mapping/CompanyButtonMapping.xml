@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.CompanyButtonMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.CompanyButton">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="btnName" jdbcType="VARCHAR" property="btnName" />
+    <result column="btnCode" jdbcType="VARCHAR" property="btnCode" />
+    <result column="actionUrl" jdbcType="VARCHAR" property="actionUrl" />
+    <result column="menuId" jdbcType="BIGINT" property="menuId" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, btnName, btnCode, actionUrl, menuId
+  </sql>
+
+  <select id="findById" parameterType="java.lang.Long" resultType="com.manage.model.CompanyButton">
+    select
+    <include refid="Base_Column_List" />
+    from tbl_company_button
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <select id="findByMenuId" parameterType="java.lang.Long" resultType="com.manage.model.CompanyButton">
+    select
+    <include refid="Base_Column_List" />
+    from tbl_company_button
+    where menuId = #{menuId,jdbcType=BIGINT}
+  </select>
+</mapper>

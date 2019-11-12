@@ -1,0 +1,57 @@
+2019-07-21 10:38:12,665 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==>  Preparing: select id, oper_name, company_id, role_id, pwd, sstatus, login_name from t_company_oper where login_name = ? 
+2019-07-21 10:38:12,674 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==> Parameters: fafa(String)
+2019-07-21 10:38:12,691 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - <==      Total: 1
+2019-07-21 10:38:12,696 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyMapping.findById] - ==>  Preparing: select * from tbl_company where id = ? 
+2019-07-21 10:38:12,698 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyMapping.findById] - ==> Parameters: 35(Integer)
+2019-07-21 10:38:12,705 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyMapping.findById] - <==      Total: 1
+2019-07-21 10:38:12,713 [http-nio-8085-exec-5] DEBUG [com.manage.dao.OrgMapping.selectByPrimaryKey] - ==>  Preparing: SELECT id,org_code,org_name,sid,istop,org_icon,relation_no,sstatus,orgType,realName,phone,addr,createDate,province,city,area FROM t_org WHERE id = ? 
+2019-07-21 10:38:12,714 [http-nio-8085-exec-5] DEBUG [com.manage.dao.OrgMapping.selectByPrimaryKey] - ==> Parameters: 62(Long)
+2019-07-21 10:38:12,723 [http-nio-8085-exec-5] DEBUG [com.manage.dao.OrgMapping.selectByPrimaryKey] - <==      Total: 1
+2019-07-21 10:38:12,729 [http-nio-8085-exec-5] DEBUG [com.manage.dao.KeyMapping.findByStatus] - ==>  Preparing: select id, workKey, cstatus, createDate from tbl_key where cstatus=? 
+2019-07-21 10:38:12,729 [http-nio-8085-exec-5] DEBUG [com.manage.dao.KeyMapping.findByStatus] - ==> Parameters: normal(String)
+2019-07-21 10:38:12,734 [http-nio-8085-exec-5] DEBUG [com.manage.dao.KeyMapping.findByStatus] - <==      Total: 1
+2019-07-21 10:38:12,857 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==>  Preparing: select m.*, b.id bid, b.btnName, b.btnCode, b.actionUrl, b.menuId, r.id rid, r.role_name, r.sid, r.role_relation_no from t_company_auth a,t_company_menu m,tbl_company_button b,t_company_role r where a.menu_id=m.id and a.button_id=b.id and r.id=a.role_id and a.role_id=? 
+2019-07-21 10:38:12,858 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==> Parameters: 2(Long)
+2019-07-21 10:38:12,867 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - <==      Total: 21
+2019-07-21 10:38:16,012 [http-nio-8085-exec-1] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-07-21 10:38:16,012 [http-nio-8085-exec-1] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 16(Long), 2(Long), 44(Long)
+2019-07-21 10:38:16,013 [http-nio-8085-exec-1] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-07-21 10:38:16,016 [http-nio-8085-exec-1] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-07-21 10:38:16,016 [http-nio-8085-exec-1] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 44(Long)
+2019-07-21 10:38:16,017 [http-nio-8085-exec-1] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-07-21 10:38:19,400 [http-nio-8085-exec-1] DEBUG [com.manage.dao.loginInfoMapper.selectByExample] - ==>  Preparing: select 'true' as QUERYID, id, oper_name, company_id, role_id, pwd, sstatus, login_name from t_company_oper WHERE ( login_name = ? ) 
+2019-07-21 10:38:19,412 [http-nio-8085-exec-1] DEBUG [com.manage.dao.loginInfoMapper.selectByExample] - ==> Parameters: fafa(String)
+2019-07-21 10:38:19,429 [http-nio-8085-exec-1] DEBUG [com.manage.dao.loginInfoMapper.selectByExample] - <==      Total: 1
+2019-07-21 10:38:20,215 [http-nio-8085-exec-1] DEBUG [com.manage.dao.companyUserInfoMapper.selectByExample] - ==>  Preparing: select 'true' as QUERYID, id, companyCode, companyName, createDate, createTime, phone, name, applyType, corporationID, licenceNo, addr, orgId, companyFloor, companyFloor2, isyaoyue from tbl_company WHERE ( id = ? and isyaoyue = ? ) 
+2019-07-21 10:38:20,222 [http-nio-8085-exec-1] DEBUG [com.manage.dao.companyUserInfoMapper.selectByExample] - ==> Parameters: 35(Long), 1(String)
+2019-07-21 10:38:20,232 [http-nio-8085-exec-1] DEBUG [com.manage.dao.companyUserInfoMapper.selectByExample] - <==      Total: 1
+2019-07-21 10:39:08,617 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==>  Preparing: select m.*, b.id bid, b.btnName, b.btnCode, b.actionUrl, b.menuId, r.id rid, r.role_name, r.sid, r.role_relation_no from t_company_auth a,t_company_menu m,tbl_company_button b,t_company_role r where a.menu_id=m.id and a.button_id=b.id and r.id=a.role_id and a.role_id=? 
+2019-07-21 10:39:08,617 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==> Parameters: 2(Long)
+2019-07-21 10:39:08,624 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - <==      Total: 21
+2019-07-21 10:39:09,639 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-07-21 10:39:09,641 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 16(Long), 2(Long), 44(Long)
+2019-07-21 10:39:09,643 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-07-21 10:39:09,646 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-07-21 10:39:09,647 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 44(Long)
+2019-07-21 10:39:09,648 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-07-21 10:39:12,708 [http-nio-8085-exec-7] DEBUG [com.manage.dao.loginInfoMapper.selectByExample] - ==>  Preparing: select 'true' as QUERYID, id, oper_name, company_id, role_id, pwd, sstatus, login_name from t_company_oper WHERE ( login_name = ? ) 
+2019-07-21 10:39:12,713 [http-nio-8085-exec-7] DEBUG [com.manage.dao.loginInfoMapper.selectByExample] - ==> Parameters: fafa(String)
+2019-07-21 10:39:12,719 [http-nio-8085-exec-7] DEBUG [com.manage.dao.loginInfoMapper.selectByExample] - <==      Total: 1
+2019-07-21 10:39:13,634 [http-nio-8085-exec-7] DEBUG [com.manage.dao.companyUserInfoMapper.selectByExample] - ==>  Preparing: select 'true' as QUERYID, id, companyCode, companyName, createDate, createTime, phone, name, applyType, corporationID, licenceNo, addr, orgId, companyFloor, companyFloor2, isyaoyue from tbl_company WHERE ( id = ? and isyaoyue = ? ) 
+2019-07-21 10:39:13,646 [http-nio-8085-exec-7] DEBUG [com.manage.dao.companyUserInfoMapper.selectByExample] - ==> Parameters: 35(Long), 1(String)
+2019-07-21 10:39:13,652 [http-nio-8085-exec-7] DEBUG [com.manage.dao.companyUserInfoMapper.selectByExample] - <==      Total: 0
+2019-07-21 11:01:09,059 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-07-21 11:01:09,063 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 16(Long), 2(Long), 43(Long)
+2019-07-21 11:01:09,074 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-07-21 11:01:09,076 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-07-21 11:01:09,077 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 43(Long)
+2019-07-21 11:01:09,080 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-07-21 11:01:17,143 [http-nio-8085-exec-3] DEBUG [com.manage.dao.yaoRecordMapper.countByExample] - ==>  Preparing: select count(*) from yaoyue_record WHERE ( endDate = ? and companyId = ? ) 
+2019-07-21 11:01:17,150 [http-nio-8085-exec-3] DEBUG [com.manage.dao.yaoRecordMapper.countByExample] - ==> Parameters: 2019-07-21(String), 35(Long)
+2019-07-21 11:01:17,159 [http-nio-8085-exec-3] DEBUG [com.manage.dao.yaoRecordMapper.countByExample] - <==      Total: 1
+2019-07-21 11:01:49,135 [http-nio-8085-exec-3] DEBUG [com.manage.dao.loginInfoMapper.selectByExample] - ==>  Preparing: select 'true' as QUERYID, id, oper_name, company_id, role_id, pwd, sstatus, login_name from t_company_oper WHERE ( login_name = ? ) 
+2019-07-21 11:01:49,143 [http-nio-8085-exec-3] DEBUG [com.manage.dao.loginInfoMapper.selectByExample] - ==> Parameters: fafa(String)
+2019-07-21 11:01:49,155 [http-nio-8085-exec-3] DEBUG [com.manage.dao.loginInfoMapper.selectByExample] - <==      Total: 1
+2019-07-21 11:02:05,695 [http-nio-8085-exec-3] DEBUG [com.manage.dao.companyUserInfoMapper.selectByExample] - ==>  Preparing: select 'true' as QUERYID, id, companyCode, companyName, createDate, createTime, phone, name, applyType, corporationID, licenceNo, addr, orgId, companyFloor, companyFloor2, isyaoyue from tbl_company WHERE ( id = ? and isyaoyue = ? ) 
+2019-07-21 11:02:05,708 [http-nio-8085-exec-3] DEBUG [com.manage.dao.companyUserInfoMapper.selectByExample] - ==> Parameters: 35(Long), 1(String)
+2019-07-21 11:02:05,715 [http-nio-8085-exec-3] DEBUG [com.manage.dao.companyUserInfoMapper.selectByExample] - <==      Total: 0

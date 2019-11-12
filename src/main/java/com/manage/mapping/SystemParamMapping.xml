@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.SystemParamMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.SystemParam">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="param_name" jdbcType="VARCHAR" property="param_name" />
+    <result column="param_text" jdbcType="VARCHAR" property="param_text" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+
+  <select id="findAllSystemParam" resultType="com.manage.model.SystemParam">
+    select id, param_name, param_text, remark
+    from t_system_param
+  </select>
+
+  <update id="updateSystemParam">
+    update t_system_param set param_text = #{systemParam.param_text} where id = #{systemParam.id}
+  </update>
+
+  <select id="systemParam" resultType="com.manage.model.SystemParam">
+    select * from t_system_param where param_name=#{paramName}
+  </select>
+</mapper>

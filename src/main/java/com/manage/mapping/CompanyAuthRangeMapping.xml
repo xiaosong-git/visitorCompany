@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.CompanyAuthRangeMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.CompanyAuthRange">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="menu_id" jdbcType="BIGINT" property="menu_id" />
+    <result column="role_id" jdbcType="BIGINT" property="role_id" />
+    <result column="button_id" jdbcType="BIGINT" property="button_id" />
+  </resultMap>
+
+  <select id="findAllByRoleId" resultType="com.manage.model.CompanyAuthRange">
+    select auth.*,menu.*
+    from t_company_auth_range auth
+    LEFT JOIN t_company_menu menu on menu.id = auth.menu_id
+    WHERE auth.role_id =#{roleId}
+    group by auth.menu_id
+  </select>
+
+  <select id="findAllButton" resultType="com.manage.model.CompanyAuthRange">
+    select auth.*,button.*
+    from t_company_auth_range auth
+    LEFT JOIN tbl_company_button button on button.id = auth.button_id
+    where auth.role_id =#{roleId} AND auth.menu_id=#{menuId}
+  </select>
+
+  <select id="findByAuthAgentRange" resultType="com.manage.model.CompanyAuthRange">
+    select id
+    from t_company_auth_range
+    where menu_id =#{menu_id} AND button_id=#{button_id} AND role_id=#{role_id} AND button_id
+  </select>
+
+  <delete id="deleteByRoleId" parameterType="java.lang.Long">
+    delete from t_company_auth_range
+    where role_id = #{role_id}
+  </delete>
+
+  <insert id="batchInsert">
+    insert into t_company_auth_range (menu_id, role_id, button_id)
+    values
+    <foreach collection="authAgentRanges" item="authAgentRange" index="index" separator="," >
+      (#{authAgentRange.menu_id,jdbcType=BIGINT}, #{authAgentRange.role_id,jdbcType=BIGINT}, #{authAgentRange.button_id,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+</mapper>

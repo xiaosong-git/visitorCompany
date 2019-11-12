@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.CompanyUserMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.CompanyUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="companyId" jdbcType="BIGINT" property="companyId" />
+    <result column="sectionId" jdbcType="BIGINT" property="sectionId" />
+    <result column="userId" jdbcType="BIGINT" property="userId" />
+    <result column="userName" jdbcType="VARCHAR" property="userName" />
+    <result column="createDate" jdbcType="VARCHAR" property="createDate" />
+    <result column="createTime" jdbcType="VARCHAR" property="createTime" />
+    <result column="roleType" jdbcType="VARCHAR" property="roleType" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="postId" jdbcType="VARCHAR" property="postId"/>
+    <result column="currentStatus" jdbcType="VARCHAR" property="currentStatus"/>
+    <result column="sex" jdbcType="VARCHAR" property="sex"/>
+    <result column="applyfailAnsaesn" property="applyfailansaesn" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="findByPage" resultType="com.manage.model.CompanyUser">
+    select cs.sectionName,cu.*,u.phone,u.sex,u.addr
+    from tbl_company_user cu
+    left join tbl_company c on cu.companyId = c.id
+    left join tbl_company_section cs on cu.sectionId = cs.id
+    left join tbl_user u on cu.userId = u.id
+    <trim prefix="where" prefixOverrides="and | or">
+      and cu.companyId = #{companyId} and cu.currentStatus !='deleted'
+      <if test="sectionName != null and sectionName.trim() != ''"> and cs.sectionName like concat(concat('%',#{sectionName}),'%')</if>
+      <if test="companyName != null and companyName.trim() != ''"> and c.companyName like concat(concat('%',#{companyName}),'%')</if>
+      <if test="userName != null and userName.trim() != ''"> and cu.userName like concat(concat('%',#{userName}),'%')</if>
+    </trim>
+  </select>
+
+  <insert id="add" parameterType="com.manage.model.CompanyUser">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tbl_company_user (companyId,sectionId,userId,userName,createDate,createTime,roleType,status,postId,currentStatus,sex)
+    values (#{companyUser.companyId},#{companyUser.sectionId},#{companyUser.userId},#{companyUser.userName},#{companyUser.createDate},#{companyUser.createTime},#{companyUser.roleType},#{companyUser.status},#{companyUser.postId},#{companyUser.currentStatus},#{companyUser.sex})
+  </insert>
+
+  <update id="update">
+  UPDATE tbl_company_user set sectionId=#{companyUser.sectionId},userName=#{companyUser.userName},roleType=#{companyUser.roleType},sex=#{companyUser.sex},status=#{companyUser.status} WHERE id=#{companyUser.id}
+  </update>
+
+
+
+  <update id="del" parameterType="java.util.List">
+      update tbl_company_user set currentStatus='deleted' WHERE id in
+      <foreach close=")" collection="ids" item="id" open="(" separator=",">
+        #{id}
+      </foreach>
+    </update>
+
+
+  <update id="updateCreaDate" parameterType="java.util.List">
+    update tbl_company_user set createDate=CURRENT_DATE  WHERE id in
+    <foreach close=")" collection="ids" item="id" open="(" separator=",">
+      #{id}
+    </foreach>
+  </update>
+
+  <update id="updateCreateTime" parameterType="java.util.List">
+    update tbl_company_user  set createTime=DATE_FORMAT(NOW(),'%H:%i:%s') WHERE id in
+    <foreach close=")" collection="ids" item="id" open="(" separator=",">
+      #{id}
+    </foreach>
+  </update>
+
+
+
+  <select id="findBySectionId" parameterType="java.lang.Long" resultType="com.manage.model.CompanyUser">
+    select *
+    from tbl_company_user
+    where sectionId = #{sectionId,jdbcType=BIGINT} and currentStatus='normal'
+  </select>
+
+  <select id="findById" parameterType="java.lang.Long" resultType="com.manage.model.CompanyUser">
+    select *
+    from tbl_company_user
+    where id = #{id,jdbcType=BIGINT} and currentStatus='normal'
+  </select>
+
+  <select id="findByUserId" parameterType="java.lang.Long" resultType="com.manage.model.CompanyUser">
+    select *
+    from tbl_company_user
+    where userId = #{userId,jdbcType=BIGINT} and status = 'applySuc' and currentStatus='normal'
+  </select>
+</mapper>

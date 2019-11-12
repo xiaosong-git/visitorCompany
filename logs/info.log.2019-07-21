@@ -1,0 +1,11 @@
+2019-07-21 10:37:59,917 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-21 10:38:00,135 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-21 10:38:08,554 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-21 10:38:08,616 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-21 10:38:12,530 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-21 10:38:12,760 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-21 10:38:12,851 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-21 10:38:16,010 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-21 10:39:08,605 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-21 10:39:09,636 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-21 11:01:09,049 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/getReason

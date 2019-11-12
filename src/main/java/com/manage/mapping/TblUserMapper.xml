@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.manage.dao.TblUserMapper" >
+  <resultMap id="BaseResultMap" type="com.manage.model.TblUser" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="orgId" property="orgid" jdbcType="BIGINT" />
+    <result column="relationNo" property="relationno" jdbcType="VARCHAR" />
+    <result column="realName" property="realname" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="niceName" property="nicename" jdbcType="VARCHAR" />
+    <result column="loginName" property="loginname" jdbcType="VARCHAR" />
+    <result column="idType" property="idtype" jdbcType="VARCHAR" />
+    <result column="idNO" property="idno" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="createDate" property="createdate" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="addr" property="addr" jdbcType="VARCHAR" />
+    <result column="isAuth" property="isauth" jdbcType="VARCHAR" />
+    <result column="authDate" property="authdate" jdbcType="VARCHAR" />
+    <result column="authTime" property="authtime" jdbcType="VARCHAR" />
+    <result column="idFrontImgUrl" property="idfrontimgurl" jdbcType="VARCHAR" />
+    <result column="idOppositeImgUrl" property="idoppositeimgurl" jdbcType="VARCHAR" />
+    <result column="idHandleImgUrl" property="idhandleimgurl" jdbcType="VARCHAR" />
+    <result column="bankCardImgUrl" property="bankcardimgurl" jdbcType="VARCHAR" />
+    <result column="headImgUrl" property="headimgurl" jdbcType="VARCHAR" />
+    <result column="token" property="token" jdbcType="VARCHAR" />
+    <result column="isSetTransPwd" property="issettranspwd" jdbcType="VARCHAR" />
+    <result column="qrcodeUrl" property="qrcodeurl" jdbcType="VARCHAR" />
+    <result column="companyId" property="companyid" jdbcType="BIGINT" />
+    <result column="role" property="role" jdbcType="VARCHAR" />
+    <result column="workKey" property="workkey" jdbcType="VARCHAR" />
+    <result column="failReason" property="failreason" jdbcType="VARCHAR" />
+    <result column="soleCode" property="solecode" jdbcType="VARCHAR" />
+    <result column="validityDate" property="validitydate" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, orgId, relationNo, realName, sex, niceName, loginName, idType, idNO, phone, createDate, 
+    createTime, province, city, area, addr, isAuth, authDate, authTime, idFrontImgUrl, 
+    idOppositeImgUrl, idHandleImgUrl, bankCardImgUrl, headImgUrl, token, isSetTransPwd, 
+    qrcodeUrl, companyId, role, workKey, failReason, soleCode, validityDate
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.manage.model.TblUserExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from tbl_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tbl_user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.manage.model.TblUserExample" >
+    delete from tbl_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.manage.model.TblUser" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tbl_user (orgId, relationNo, realName, 
+      sex, niceName, loginName, 
+      idType, idNO, phone, 
+      createDate, createTime, province, 
+      city, area, addr, isAuth, 
+      authDate, authTime, idFrontImgUrl, 
+      idOppositeImgUrl, idHandleImgUrl, bankCardImgUrl, 
+      headImgUrl, token, isSetTransPwd, 
+      qrcodeUrl, companyId, role, 
+      workKey, failReason, soleCode, 
+      validityDate)
+    values (#{orgid,jdbcType=BIGINT}, #{relationno,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=VARCHAR}, #{nicename,jdbcType=VARCHAR}, #{loginname,jdbcType=VARCHAR}, 
+      #{idtype,jdbcType=VARCHAR}, #{idno,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{createdate,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, #{addr,jdbcType=VARCHAR}, #{isauth,jdbcType=VARCHAR}, 
+      #{authdate,jdbcType=VARCHAR}, #{authtime,jdbcType=VARCHAR}, #{idfrontimgurl,jdbcType=VARCHAR}, 
+      #{idoppositeimgurl,jdbcType=VARCHAR}, #{idhandleimgurl,jdbcType=VARCHAR}, #{bankcardimgurl,jdbcType=VARCHAR}, 
+      #{headimgurl,jdbcType=VARCHAR}, #{token,jdbcType=VARCHAR}, #{issettranspwd,jdbcType=VARCHAR}, 
+      #{qrcodeurl,jdbcType=VARCHAR}, #{companyid,jdbcType=BIGINT}, #{role,jdbcType=VARCHAR}, 
+      #{workkey,jdbcType=VARCHAR}, #{failreason,jdbcType=VARCHAR}, #{solecode,jdbcType=VARCHAR}, 
+      #{validitydate,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.manage.model.TblUser" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tbl_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orgid != null" >
+        orgId,
+      </if>
+      <if test="relationno != null" >
+        relationNo,
+      </if>
+      <if test="realname != null" >
+        realName,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="nicename != null" >
+        niceName,
+      </if>
+      <if test="loginname != null" >
+        loginName,
+      </if>
+      <if test="idtype != null" >
+        idType,
+      </if>
+      <if test="idno != null" >
+        idNO,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="createdate != null" >
+        createDate,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="area != null" >
+        area,
+      </if>
+      <if test="addr != null" >
+        addr,
+      </if>
+      <if test="isauth != null" >
+        isAuth,
+      </if>
+      <if test="authdate != null" >
+        authDate,
+      </if>
+      <if test="authtime != null" >
+        authTime,
+      </if>
+      <if test="idfrontimgurl != null" >
+        idFrontImgUrl,
+      </if>
+      <if test="idoppositeimgurl != null" >
+        idOppositeImgUrl,
+      </if>
+      <if test="idhandleimgurl != null" >
+        idHandleImgUrl,
+      </if>
+      <if test="bankcardimgurl != null" >
+        bankCardImgUrl,
+      </if>
+      <if test="headimgurl != null" >
+        headImgUrl,
+      </if>
+      <if test="token != null" >
+        token,
+      </if>
+      <if test="issettranspwd != null" >
+        isSetTransPwd,
+      </if>
+      <if test="qrcodeurl != null" >
+        qrcodeUrl,
+      </if>
+      <if test="companyid != null" >
+        companyId,
+      </if>
+      <if test="role != null" >
+        role,
+      </if>
+      <if test="workkey != null" >
+        workKey,
+      </if>
+      <if test="failreason != null" >
+        failReason,
+      </if>
+      <if test="solecode != null" >
+        soleCode,
+      </if>
+      <if test="validitydate != null" >
+        validityDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orgid != null" >
+        #{orgid,jdbcType=BIGINT},
+      </if>
+      <if test="relationno != null" >
+        #{relationno,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="nicename != null" >
+        #{nicename,jdbcType=VARCHAR},
+      </if>
+      <if test="loginname != null" >
+        #{loginname,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null" >
+        #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idno != null" >
+        #{idno,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        #{createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null" >
+        #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="isauth != null" >
+        #{isauth,jdbcType=VARCHAR},
+      </if>
+      <if test="authdate != null" >
+        #{authdate,jdbcType=VARCHAR},
+      </if>
+      <if test="authtime != null" >
+        #{authtime,jdbcType=VARCHAR},
+      </if>
+      <if test="idfrontimgurl != null" >
+        #{idfrontimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="idoppositeimgurl != null" >
+        #{idoppositeimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="idhandleimgurl != null" >
+        #{idhandleimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="bankcardimgurl != null" >
+        #{bankcardimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgurl != null" >
+        #{headimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null" >
+        #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="issettranspwd != null" >
+        #{issettranspwd,jdbcType=VARCHAR},
+      </if>
+      <if test="qrcodeurl != null" >
+        #{qrcodeurl,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null" >
+        #{companyid,jdbcType=BIGINT},
+      </if>
+      <if test="role != null" >
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="workkey != null" >
+        #{workkey,jdbcType=VARCHAR},
+      </if>
+      <if test="failreason != null" >
+        #{failreason,jdbcType=VARCHAR},
+      </if>
+      <if test="solecode != null" >
+        #{solecode,jdbcType=VARCHAR},
+      </if>
+      <if test="validitydate != null" >
+        #{validitydate,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.manage.model.TblUserExample" resultType="java.lang.Integer" >
+    select count(*) from tbl_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update tbl_user
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.orgid != null" >
+        orgId = #{record.orgid,jdbcType=BIGINT},
+      </if>
+      <if test="record.relationno != null" >
+        relationNo = #{record.relationno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.realname != null" >
+        realName = #{record.realname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sex != null" >
+        sex = #{record.sex,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nicename != null" >
+        niceName = #{record.nicename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.loginname != null" >
+        loginName = #{record.loginname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idtype != null" >
+        idType = #{record.idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idno != null" >
+        idNO = #{record.idno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.phone != null" >
+        phone = #{record.phone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createdate != null" >
+        createDate = #{record.createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createtime != null" >
+        createTime = #{record.createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.province != null" >
+        province = #{record.province,jdbcType=VARCHAR},
+      </if>
+      <if test="record.city != null" >
+        city = #{record.city,jdbcType=VARCHAR},
+      </if>
+      <if test="record.area != null" >
+        area = #{record.area,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addr != null" >
+        addr = #{record.addr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isauth != null" >
+        isAuth = #{record.isauth,jdbcType=VARCHAR},
+      </if>
+      <if test="record.authdate != null" >
+        authDate = #{record.authdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.authtime != null" >
+        authTime = #{record.authtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idfrontimgurl != null" >
+        idFrontImgUrl = #{record.idfrontimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idoppositeimgurl != null" >
+        idOppositeImgUrl = #{record.idoppositeimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idhandleimgurl != null" >
+        idHandleImgUrl = #{record.idhandleimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankcardimgurl != null" >
+        bankCardImgUrl = #{record.bankcardimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.headimgurl != null" >
+        headImgUrl = #{record.headimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.token != null" >
+        token = #{record.token,jdbcType=VARCHAR},
+      </if>
+      <if test="record.issettranspwd != null" >
+        isSetTransPwd = #{record.issettranspwd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.qrcodeurl != null" >
+        qrcodeUrl = #{record.qrcodeurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyid != null" >
+        companyId = #{record.companyid,jdbcType=BIGINT},
+      </if>
+      <if test="record.role != null" >
+        role = #{record.role,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workkey != null" >
+        workKey = #{record.workkey,jdbcType=VARCHAR},
+      </if>
+      <if test="record.failreason != null" >
+        failReason = #{record.failreason,jdbcType=VARCHAR},
+      </if>
+      <if test="record.solecode != null" >
+        soleCode = #{record.solecode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.validitydate != null" >
+        validityDate = #{record.validitydate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update tbl_user
+    set id = #{record.id,jdbcType=BIGINT},
+      orgId = #{record.orgid,jdbcType=BIGINT},
+      relationNo = #{record.relationno,jdbcType=VARCHAR},
+      realName = #{record.realname,jdbcType=VARCHAR},
+      sex = #{record.sex,jdbcType=VARCHAR},
+      niceName = #{record.nicename,jdbcType=VARCHAR},
+      loginName = #{record.loginname,jdbcType=VARCHAR},
+      idType = #{record.idtype,jdbcType=VARCHAR},
+      idNO = #{record.idno,jdbcType=VARCHAR},
+      phone = #{record.phone,jdbcType=VARCHAR},
+      createDate = #{record.createdate,jdbcType=VARCHAR},
+      createTime = #{record.createtime,jdbcType=VARCHAR},
+      province = #{record.province,jdbcType=VARCHAR},
+      city = #{record.city,jdbcType=VARCHAR},
+      area = #{record.area,jdbcType=VARCHAR},
+      addr = #{record.addr,jdbcType=VARCHAR},
+      isAuth = #{record.isauth,jdbcType=VARCHAR},
+      authDate = #{record.authdate,jdbcType=VARCHAR},
+      authTime = #{record.authtime,jdbcType=VARCHAR},
+      idFrontImgUrl = #{record.idfrontimgurl,jdbcType=VARCHAR},
+      idOppositeImgUrl = #{record.idoppositeimgurl,jdbcType=VARCHAR},
+      idHandleImgUrl = #{record.idhandleimgurl,jdbcType=VARCHAR},
+      bankCardImgUrl = #{record.bankcardimgurl,jdbcType=VARCHAR},
+      headImgUrl = #{record.headimgurl,jdbcType=VARCHAR},
+      token = #{record.token,jdbcType=VARCHAR},
+      isSetTransPwd = #{record.issettranspwd,jdbcType=VARCHAR},
+      qrcodeUrl = #{record.qrcodeurl,jdbcType=VARCHAR},
+      companyId = #{record.companyid,jdbcType=BIGINT},
+      role = #{record.role,jdbcType=VARCHAR},
+      workKey = #{record.workkey,jdbcType=VARCHAR},
+      failReason = #{record.failreason,jdbcType=VARCHAR},
+      soleCode = #{record.solecode,jdbcType=VARCHAR},
+      validityDate = #{record.validitydate,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.manage.model.TblUser" >
+    update tbl_user
+    <set >
+      <if test="orgid != null" >
+        orgId = #{orgid,jdbcType=BIGINT},
+      </if>
+      <if test="relationno != null" >
+        relationNo = #{relationno,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        realName = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="nicename != null" >
+        niceName = #{nicename,jdbcType=VARCHAR},
+      </if>
+      <if test="loginname != null" >
+        loginName = #{loginname,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null" >
+        idType = #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idno != null" >
+        idNO = #{idno,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        createDate = #{createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null" >
+        addr = #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="isauth != null" >
+        isAuth = #{isauth,jdbcType=VARCHAR},
+      </if>
+      <if test="authdate != null" >
+        authDate = #{authdate,jdbcType=VARCHAR},
+      </if>
+      <if test="authtime != null" >
+        authTime = #{authtime,jdbcType=VARCHAR},
+      </if>
+      <if test="idfrontimgurl != null" >
+        idFrontImgUrl = #{idfrontimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="idoppositeimgurl != null" >
+        idOppositeImgUrl = #{idoppositeimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="idhandleimgurl != null" >
+        idHandleImgUrl = #{idhandleimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="bankcardimgurl != null" >
+        bankCardImgUrl = #{bankcardimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgurl != null" >
+        headImgUrl = #{headimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null" >
+        token = #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="issettranspwd != null" >
+        isSetTransPwd = #{issettranspwd,jdbcType=VARCHAR},
+      </if>
+      <if test="qrcodeurl != null" >
+        qrcodeUrl = #{qrcodeurl,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null" >
+        companyId = #{companyid,jdbcType=BIGINT},
+      </if>
+      <if test="role != null" >
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="workkey != null" >
+        workKey = #{workkey,jdbcType=VARCHAR},
+      </if>
+      <if test="failreason != null" >
+        failReason = #{failreason,jdbcType=VARCHAR},
+      </if>
+      <if test="solecode != null" >
+        soleCode = #{solecode,jdbcType=VARCHAR},
+      </if>
+      <if test="validitydate != null" >
+        validityDate = #{validitydate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.manage.model.TblUser" >
+    update tbl_user
+    set orgId = #{orgid,jdbcType=BIGINT},
+      relationNo = #{relationno,jdbcType=VARCHAR},
+      realName = #{realname,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      niceName = #{nicename,jdbcType=VARCHAR},
+      loginName = #{loginname,jdbcType=VARCHAR},
+      idType = #{idtype,jdbcType=VARCHAR},
+      idNO = #{idno,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      createDate = #{createdate,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      addr = #{addr,jdbcType=VARCHAR},
+      isAuth = #{isauth,jdbcType=VARCHAR},
+      authDate = #{authdate,jdbcType=VARCHAR},
+      authTime = #{authtime,jdbcType=VARCHAR},
+      idFrontImgUrl = #{idfrontimgurl,jdbcType=VARCHAR},
+      idOppositeImgUrl = #{idoppositeimgurl,jdbcType=VARCHAR},
+      idHandleImgUrl = #{idhandleimgurl,jdbcType=VARCHAR},
+      bankCardImgUrl = #{bankcardimgurl,jdbcType=VARCHAR},
+      headImgUrl = #{headimgurl,jdbcType=VARCHAR},
+      token = #{token,jdbcType=VARCHAR},
+      isSetTransPwd = #{issettranspwd,jdbcType=VARCHAR},
+      qrcodeUrl = #{qrcodeurl,jdbcType=VARCHAR},
+      companyId = #{companyid,jdbcType=BIGINT},
+      role = #{role,jdbcType=VARCHAR},
+      workKey = #{workkey,jdbcType=VARCHAR},
+      failReason = #{failreason,jdbcType=VARCHAR},
+      soleCode = #{solecode,jdbcType=VARCHAR},
+      validityDate = #{validitydate,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findByPage" resultType="com.manage.model.TblUser">
+    select *
+    from tbl_user
+    <trim prefix="where" prefixOverrides="and | or">
+      <if test="realName != null and realName.trim() != ''">  and realName like #{realName}</if>
+    </trim>
+    and idfrontImgUrl='vip' ORDER BY createDate desc
+  </select>
+
+  <delete id="deleteVipUser" parameterType="java.util.List">
+    DELETE FROM tbl_user WHERE id in
+    <foreach collection="ids" item="id" separator="," open="(" close=")">
+      #{id}
+    </foreach>
+  </delete>
+</mapper>

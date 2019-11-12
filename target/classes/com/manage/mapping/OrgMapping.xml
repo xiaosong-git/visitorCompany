@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.OrgMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.Org">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="org_code" jdbcType="VARCHAR" property="org_code" />
+    <result column="org_name" jdbcType="VARCHAR" property="org_name" />
+    <result column="sid" jdbcType="BIGINT" property="sid" />
+    <result column="istop" jdbcType="VARCHAR" property="istop" />
+    <result column="org_icon" jdbcType="VARCHAR" property="org_icon" />
+    <result column="relation_no" jdbcType="VARCHAR" property="relation_no" />
+    <result column="sstatus" jdbcType="VARCHAR" property="sstatus" />
+    <result column="orgType" jdbcType="VARCHAR" property="orgType" />
+    <result column="realName" jdbcType="VARCHAR" property="realName" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="addr" jdbcType="VARCHAR" property="addr" />
+    <result column="createDate" jdbcType="VARCHAR" property="createDate" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+  </resultMap>
+
+</mapper>

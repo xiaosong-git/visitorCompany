@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.manage.dao.companyUserInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.manage.model.companyUserInfo" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="companyCode" property="companycode" jdbcType="VARCHAR" />
+    <result column="companyName" property="companyname" jdbcType="VARCHAR" />
+    <result column="createDate" property="createdate" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="applyType" property="applytype" jdbcType="VARCHAR" />
+    <result column="corporationID" property="corporationid" jdbcType="VARCHAR" />
+    <result column="licenceNo" property="licenceno" jdbcType="VARCHAR" />
+    <result column="addr" property="addr" jdbcType="VARCHAR" />
+    <result column="orgId" property="orgid" jdbcType="BIGINT" />
+    <result column="companyFloor" property="companyfloor" jdbcType="VARCHAR" />
+    <result column="companyFloor2" property="companyfloor2" jdbcType="VARCHAR" />
+    <result column="isyaoyue" property="isyaoyue" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, companyCode, companyName, createDate, createTime, phone, name, applyType, corporationID, 
+    licenceNo, addr, orgId, companyFloor, companyFloor2, isyaoyue
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.manage.model.companyUserInfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from tbl_company
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_company
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tbl_company
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.manage.model.companyUserInfoExample" >
+    delete from tbl_company
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.manage.model.companyUserInfo" >
+    insert into tbl_company (id, companyCode, companyName, 
+      createDate, createTime, phone, 
+      name, applyType, corporationID, 
+      licenceNo, addr, orgId, 
+      companyFloor, companyFloor2, isyaoyue
+      )
+    values (#{id,jdbcType=BIGINT}, #{companycode,jdbcType=VARCHAR}, #{companyname,jdbcType=VARCHAR}, 
+      #{createdate,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{applytype,jdbcType=VARCHAR}, #{corporationid,jdbcType=VARCHAR}, 
+      #{licenceno,jdbcType=VARCHAR}, #{addr,jdbcType=VARCHAR}, #{orgid,jdbcType=BIGINT}, 
+      #{companyfloor,jdbcType=VARCHAR}, #{companyfloor2,jdbcType=VARCHAR}, #{isyaoyue,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.manage.model.companyUserInfo" >
+    insert into tbl_company
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="companycode != null" >
+        companyCode,
+      </if>
+      <if test="companyname != null" >
+        companyName,
+      </if>
+      <if test="createdate != null" >
+        createDate,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="applytype != null" >
+        applyType,
+      </if>
+      <if test="corporationid != null" >
+        corporationID,
+      </if>
+      <if test="licenceno != null" >
+        licenceNo,
+      </if>
+      <if test="addr != null" >
+        addr,
+      </if>
+      <if test="orgid != null" >
+        orgId,
+      </if>
+      <if test="companyfloor != null" >
+        companyFloor,
+      </if>
+      <if test="companyfloor2 != null" >
+        companyFloor2,
+      </if>
+      <if test="isyaoyue != null" >
+        isyaoyue,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="companycode != null" >
+        #{companycode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null" >
+        #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        #{createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="applytype != null" >
+        #{applytype,jdbcType=VARCHAR},
+      </if>
+      <if test="corporationid != null" >
+        #{corporationid,jdbcType=VARCHAR},
+      </if>
+      <if test="licenceno != null" >
+        #{licenceno,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null" >
+        #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="orgid != null" >
+        #{orgid,jdbcType=BIGINT},
+      </if>
+      <if test="companyfloor != null" >
+        #{companyfloor,jdbcType=VARCHAR},
+      </if>
+      <if test="companyfloor2 != null" >
+        #{companyfloor2,jdbcType=VARCHAR},
+      </if>
+      <if test="isyaoyue != null" >
+        #{isyaoyue,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.manage.model.companyUserInfoExample" resultType="java.lang.Integer" >
+    select count(*) from tbl_company
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update tbl_company
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.companycode != null" >
+        companyCode = #{record.companycode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyname != null" >
+        companyName = #{record.companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createdate != null" >
+        createDate = #{record.createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createtime != null" >
+        createTime = #{record.createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.phone != null" >
+        phone = #{record.phone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applytype != null" >
+        applyType = #{record.applytype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.corporationid != null" >
+        corporationID = #{record.corporationid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.licenceno != null" >
+        licenceNo = #{record.licenceno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addr != null" >
+        addr = #{record.addr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.orgid != null" >
+        orgId = #{record.orgid,jdbcType=BIGINT},
+      </if>
+      <if test="record.companyfloor != null" >
+        companyFloor = #{record.companyfloor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyfloor2 != null" >
+        companyFloor2 = #{record.companyfloor2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isyaoyue != null" >
+        isyaoyue = #{record.isyaoyue,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update tbl_company
+    set id = #{record.id,jdbcType=BIGINT},
+      companyCode = #{record.companycode,jdbcType=VARCHAR},
+      companyName = #{record.companyname,jdbcType=VARCHAR},
+      createDate = #{record.createdate,jdbcType=VARCHAR},
+      createTime = #{record.createtime,jdbcType=VARCHAR},
+      phone = #{record.phone,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      applyType = #{record.applytype,jdbcType=VARCHAR},
+      corporationID = #{record.corporationid,jdbcType=VARCHAR},
+      licenceNo = #{record.licenceno,jdbcType=VARCHAR},
+      addr = #{record.addr,jdbcType=VARCHAR},
+      orgId = #{record.orgid,jdbcType=BIGINT},
+      companyFloor = #{record.companyfloor,jdbcType=VARCHAR},
+      companyFloor2 = #{record.companyfloor2,jdbcType=VARCHAR},
+      isyaoyue = #{record.isyaoyue,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.manage.model.companyUserInfo" >
+    update tbl_company
+    <set >
+      <if test="companycode != null" >
+        companyCode = #{companycode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null" >
+        companyName = #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        createDate = #{createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="applytype != null" >
+        applyType = #{applytype,jdbcType=VARCHAR},
+      </if>
+      <if test="corporationid != null" >
+        corporationID = #{corporationid,jdbcType=VARCHAR},
+      </if>
+      <if test="licenceno != null" >
+        licenceNo = #{licenceno,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null" >
+        addr = #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="orgid != null" >
+        orgId = #{orgid,jdbcType=BIGINT},
+      </if>
+      <if test="companyfloor != null" >
+        companyFloor = #{companyfloor,jdbcType=VARCHAR},
+      </if>
+      <if test="companyfloor2 != null" >
+        companyFloor2 = #{companyfloor2,jdbcType=VARCHAR},
+      </if>
+      <if test="isyaoyue != null" >
+        isyaoyue = #{isyaoyue,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.manage.model.companyUserInfo" >
+    update tbl_company
+    set companyCode = #{companycode,jdbcType=VARCHAR},
+      companyName = #{companyname,jdbcType=VARCHAR},
+      createDate = #{createdate,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      applyType = #{applytype,jdbcType=VARCHAR},
+      corporationID = #{corporationid,jdbcType=VARCHAR},
+      licenceNo = #{licenceno,jdbcType=VARCHAR},
+      addr = #{addr,jdbcType=VARCHAR},
+      orgId = #{orgid,jdbcType=BIGINT},
+      companyFloor = #{companyfloor,jdbcType=VARCHAR},
+      companyFloor2 = #{companyfloor2,jdbcType=VARCHAR},
+      isyaoyue = #{isyaoyue,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

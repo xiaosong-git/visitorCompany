@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.CompanyAuthMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.CompanyAuth">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="menu_id" jdbcType="BIGINT" property="menu_id" />
+    <result column="role_id" jdbcType="BIGINT" property="role_id" />
+    <result column="button_id" jdbcType="BIGINT" property="button_id" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, menu_id, role_id, button_id
+  </sql>
+
+  <select id="selectBybtnIdAndRoleIdAndMenuId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_company_auth
+    where menu_id = #{menuId,jdbcType=BIGINT} and role_id = #{roleId,jdbcType=BIGINT} and button_id = #{buttonId,jdbcType=BIGINT}
+  </select>
+
+  <delete id="deleteByRoleid" parameterType="java.lang.Long">
+    delete from t_company_auth
+    where role_id = #{roleId,jdbcType=BIGINT}
+  </delete>
+
+  <delete id="batchDelete" parameterType="java.util.List">
+    delete from t_company_auth where id in
+    <foreach collection="ids" item="id" separator="," open="(" close=")">
+      #{id}
+    </foreach>
+  </delete>
+
+  <insert id="batchInsert" useGeneratedKeys="true" keyProperty="id">
+    insert into t_company_auth (menu_id, role_id, button_id)
+    values
+    <foreach collection="list" item="auths" index="index" separator="," >
+      (#{auths.menu_id,jdbcType=BIGINT}, #{auths.role_id,jdbcType=BIGINT}, #{auths.button_id,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+
+  <!-- 单向关联菜单按钮 -->
+  <sql id="MenuAndButton">
+    m.*, b.id bid, b.btnName, b.btnCode, b.actionUrl, b.menuId, r.id rid, r.role_name, r.sid, r.role_relation_no
+  </sql>
+
+  <select id="findMenu" parameterType="Long" resultMap="ResultMenuMap">
+    select
+    <include refid="MenuAndButton" />
+    from t_company_auth a,t_company_menu m,tbl_company_button b,t_company_role r where a.menu_id=m.id
+    and a.button_id=b.id
+    and r.id=a.role_id
+    and a.role_id=#{roleId}
+  </select>
+
+  <resultMap id="ResultMenuMap" type="com.manage.model.CompanyRole">
+    <id property="id" column="rid"/>
+    <result property="role_name" column="role_name"/>
+    <result property="sid" column="sid"/>
+    <result property="role_relation_no" column="role_relation_no"/>
+    <collection property="menus" ofType="com.manage.model.CompanyMenu">
+      <id property="id" column="id"/>
+      <result property="menu_code" column="menu_code"/>
+      <result property="menu_name" column="menu_name"/>
+      <result property="menu_url" column="menu_url"/>
+      <result property="sid" column="sid"/>
+      <result property="istop" column="istop"/>
+      <result property="menu_icon" column="menu_icon"/>
+      <result property="sstatus" column="sstatus"/>
+      <result property="relation_no" column="relation_no"/>
+      <result property="remarks" column="remarks"/>
+      <collection property="buttons" ofType="com.manage.model.CompanyButton">
+        <id property="id" column="bid"/>
+        <result property="btnName" column="btnName"/>
+        <result property="btnCode" column="btnCode"/>
+        <result property="actionUrl" column="actionUrl"/>
+        <result property="menuId" column="menuId"/>
+      </collection>
+    </collection>
+  </resultMap>
+</mapper>

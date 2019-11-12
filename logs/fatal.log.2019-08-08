@@ -1,0 +1,108 @@
+2019-08-08 08:58:42,451 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==>  Preparing: select id, oper_name, company_id, role_id, pwd, sstatus, login_name from t_company_oper where login_name = ? 
+2019-08-08 08:58:42,458 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==> Parameters: lisi3(String)
+2019-08-08 08:58:42,462 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - <==      Total: 1
+2019-08-08 08:58:42,466 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyMapping.findById] - ==>  Preparing: select * from tbl_company where id = ? 
+2019-08-08 08:58:42,466 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyMapping.findById] - ==> Parameters: 36(Integer)
+2019-08-08 08:58:42,470 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyMapping.findById] - <==      Total: 1
+2019-08-08 08:58:42,473 [http-nio-8085-exec-7] DEBUG [com.manage.dao.OrgMapping.selectByPrimaryKey] - ==>  Preparing: SELECT id,org_code,org_name,sid,istop,org_icon,relation_no,sstatus,orgType,realName,phone,addr,createDate,province,city,area FROM t_org WHERE id = ? 
+2019-08-08 08:58:42,473 [http-nio-8085-exec-7] DEBUG [com.manage.dao.OrgMapping.selectByPrimaryKey] - ==> Parameters: 62(Long)
+2019-08-08 08:58:42,476 [http-nio-8085-exec-7] DEBUG [com.manage.dao.OrgMapping.selectByPrimaryKey] - <==      Total: 1
+2019-08-08 08:58:42,479 [http-nio-8085-exec-7] DEBUG [com.manage.dao.KeyMapping.findByStatus] - ==>  Preparing: select id, workKey, cstatus, createDate from tbl_key where cstatus=? 
+2019-08-08 08:58:42,479 [http-nio-8085-exec-7] DEBUG [com.manage.dao.KeyMapping.findByStatus] - ==> Parameters: normal(String)
+2019-08-08 08:58:42,482 [http-nio-8085-exec-7] DEBUG [com.manage.dao.KeyMapping.findByStatus] - <==      Total: 1
+2019-08-08 08:58:42,901 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==>  Preparing: select m.*, b.id bid, b.btnName, b.btnCode, b.actionUrl, b.menuId, r.id rid, r.role_name, r.sid, r.role_relation_no from t_company_auth a,t_company_menu m,tbl_company_button b,t_company_role r where a.menu_id=m.id and a.button_id=b.id and r.id=a.role_id and a.role_id=? 
+2019-08-08 08:58:42,902 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==> Parameters: 2(Long)
+2019-08-08 08:58:42,915 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - <==      Total: 29
+2019-08-08 08:58:45,590 [http-nio-8085-exec-4] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-08-08 08:58:45,590 [http-nio-8085-exec-4] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 18(Long), 2(Long), 46(Long)
+2019-08-08 08:58:45,591 [http-nio-8085-exec-4] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-08-08 08:58:45,593 [http-nio-8085-exec-4] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-08-08 08:58:45,594 [http-nio-8085-exec-4] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 46(Long)
+2019-08-08 08:58:45,595 [http-nio-8085-exec-4] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-08-08 08:58:45,597 [http-nio-8085-exec-4] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - ==>  Preparing: SELECT count(0) FROM tbl_user WHERE realName LIKE ? AND idfrontImgUrl = 'v' 
+2019-08-08 08:58:45,598 [http-nio-8085-exec-4] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - ==> Parameters: %%(String)
+2019-08-08 08:58:45,599 [http-nio-8085-exec-4] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - <==      Total: 1
+2019-08-08 08:58:45,599 [http-nio-8085-exec-4] DEBUG [com.manage.dao.TblUserMapper.findByPage] - ==>  Preparing: select * from tbl_user where realName like ? and idfrontImgUrl='v' ORDER BY createDate desc LIMIT 10 
+2019-08-08 08:58:45,600 [http-nio-8085-exec-4] DEBUG [com.manage.dao.TblUserMapper.findByPage] - ==> Parameters: %%(String)
+2019-08-08 08:58:45,601 [http-nio-8085-exec-4] DEBUG [com.manage.dao.TblUserMapper.findByPage] - <==      Total: 6
+2019-08-08 08:58:54,131 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-08-08 08:58:54,131 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 18(Long), 2(Long), 50(Long)
+2019-08-08 08:58:54,132 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-08-08 08:58:54,133 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-08-08 08:58:54,133 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 50(Long)
+2019-08-08 08:58:54,134 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-08-08 08:58:55,245 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-08-08 08:58:55,246 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 18(Long), 2(Long), 49(Long)
+2019-08-08 08:58:55,248 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-08-08 08:58:55,251 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-08-08 08:58:55,252 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 49(Long)
+2019-08-08 08:58:55,255 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-08-08 08:58:55,643 [http-nio-8085-exec-8] DEBUG [com.manage.dao.TblUserMapper.updateByPrimaryKeySelective] - ==>  Preparing: update tbl_user SET realName = ?, idNO = ?, phone = ?, idHandleImgUrl = ? where id = ? 
+2019-08-08 08:58:55,648 [http-nio-8085-exec-8] DEBUG [com.manage.dao.TblUserMapper.updateByPrimaryKeySelective] - ==> Parameters: 希望变态(String), 5468748654566(String), 14700024115(String), user/81/1565226007122.jpg(String), 81(Long)
+2019-08-08 08:58:55,651 [http-nio-8085-exec-8] DEBUG [com.manage.dao.TblUserMapper.updateByPrimaryKeySelective] - <==    Updates: 1
+2019-08-08 08:58:55,728 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-08-08 08:58:55,729 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 18(Long), 2(Long), 46(Long)
+2019-08-08 08:58:55,729 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-08-08 08:58:55,730 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-08-08 08:58:55,730 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 46(Long)
+2019-08-08 08:58:55,731 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-08-08 08:58:55,733 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - ==>  Preparing: SELECT count(0) FROM tbl_user WHERE realName LIKE ? AND idfrontImgUrl = 'v' 
+2019-08-08 08:58:55,734 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - ==> Parameters: %%(String)
+2019-08-08 08:58:55,734 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - <==      Total: 1
+2019-08-08 08:58:55,735 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.findByPage] - ==>  Preparing: select * from tbl_user where realName like ? and idfrontImgUrl='v' ORDER BY createDate desc LIMIT 10 
+2019-08-08 08:58:55,735 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.findByPage] - ==> Parameters: %%(String)
+2019-08-08 08:58:55,737 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.findByPage] - <==      Total: 6
+2019-08-08 08:59:03,804 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-08-08 08:59:03,807 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 18(Long), 2(Long), 48(Long)
+2019-08-08 08:59:03,808 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-08-08 08:59:03,811 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-08-08 08:59:03,812 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 48(Long)
+2019-08-08 08:59:03,813 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-08-08 08:59:03,817 [http-nio-8085-exec-3] DEBUG [com.manage.dao.TblUserMapper.deleteVipUser] - ==>  Preparing: DELETE FROM tbl_user WHERE id in ( ? ) 
+2019-08-08 08:59:03,822 [http-nio-8085-exec-3] DEBUG [com.manage.dao.TblUserMapper.deleteVipUser] - ==> Parameters: 81(Integer)
+2019-08-08 08:59:03,827 [http-nio-8085-exec-3] DEBUG [com.manage.dao.TblUserMapper.deleteVipUser] - <==    Updates: 1
+2019-08-08 08:59:03,850 [http-nio-8085-exec-6] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-08-08 08:59:03,850 [http-nio-8085-exec-6] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 18(Long), 2(Long), 46(Long)
+2019-08-08 08:59:03,851 [http-nio-8085-exec-6] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-08-08 08:59:03,853 [http-nio-8085-exec-6] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-08-08 08:59:03,854 [http-nio-8085-exec-6] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 46(Long)
+2019-08-08 08:59:03,855 [http-nio-8085-exec-6] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-08-08 08:59:03,858 [http-nio-8085-exec-6] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - ==>  Preparing: SELECT count(0) FROM tbl_user WHERE realName LIKE ? AND idfrontImgUrl = 'v' 
+2019-08-08 08:59:03,859 [http-nio-8085-exec-6] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - ==> Parameters: %%(String)
+2019-08-08 08:59:03,860 [http-nio-8085-exec-6] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - <==      Total: 1
+2019-08-08 08:59:03,860 [http-nio-8085-exec-6] DEBUG [com.manage.dao.TblUserMapper.findByPage] - ==>  Preparing: select * from tbl_user where realName like ? and idfrontImgUrl='v' ORDER BY createDate desc LIMIT 10 
+2019-08-08 08:59:03,861 [http-nio-8085-exec-6] DEBUG [com.manage.dao.TblUserMapper.findByPage] - ==> Parameters: %%(String)
+2019-08-08 08:59:03,864 [http-nio-8085-exec-6] DEBUG [com.manage.dao.TblUserMapper.findByPage] - <==      Total: 5
+2019-08-08 08:59:21,935 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-08-08 08:59:21,936 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 18(Long), 2(Long), 50(Long)
+2019-08-08 08:59:21,939 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-08-08 08:59:21,940 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-08-08 08:59:21,940 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 50(Long)
+2019-08-08 08:59:21,941 [http-nio-8085-exec-8] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-08-08 08:59:22,941 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-08-08 08:59:22,943 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 18(Long), 2(Long), 47(Long)
+2019-08-08 08:59:22,946 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-08-08 08:59:22,948 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-08-08 08:59:22,949 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 47(Long)
+2019-08-08 08:59:22,951 [http-nio-8085-exec-10] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-08-08 08:59:22,956 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.insertSelective] - ==>  Preparing: insert into tbl_user ( realName, loginName, idNO, phone, createDate, createTime, isAuth, idFrontImgUrl ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-08-08 08:59:22,961 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.insertSelective] - ==> Parameters: sfsadfas(String), 14700024118(String), 56622559665(String), 14700024118(String), 2019-08-08(String), 08:59:22(String), T(String), v(String)
+2019-08-08 08:59:22,965 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.insertSelective] - <==    Updates: 1
+2019-08-08 08:59:22,966 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.insertSelective!selectKey] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-08-08 08:59:22,969 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.insertSelective!selectKey] - ==> Parameters: 
+2019-08-08 08:59:22,971 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.insertSelective!selectKey] - <==      Total: 1
+2019-08-08 08:59:23,043 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.updateByPrimaryKeySelective] - ==>  Preparing: update tbl_user SET idHandleImgUrl = ? where id = ? 
+2019-08-08 08:59:23,043 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.updateByPrimaryKeySelective] - ==> Parameters: user/83/1565226034657.png(String), 83(Long)
+2019-08-08 08:59:23,045 [http-nio-8085-exec-10] DEBUG [com.manage.dao.TblUserMapper.updateByPrimaryKeySelective] - <==    Updates: 1
+2019-08-08 08:59:23,113 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-08-08 08:59:23,113 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 18(Long), 2(Long), 46(Long)
+2019-08-08 08:59:23,114 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-08-08 08:59:23,115 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-08-08 08:59:23,115 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 46(Long)
+2019-08-08 08:59:23,115 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-08-08 08:59:23,117 [http-nio-8085-exec-3] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - ==>  Preparing: SELECT count(0) FROM tbl_user WHERE realName LIKE ? AND idfrontImgUrl = 'v' 
+2019-08-08 08:59:23,118 [http-nio-8085-exec-3] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - ==> Parameters: %%(String)
+2019-08-08 08:59:23,118 [http-nio-8085-exec-3] DEBUG [com.manage.dao.TblUserMapper.findByPage_COUNT] - <==      Total: 1
+2019-08-08 08:59:23,119 [http-nio-8085-exec-3] DEBUG [com.manage.dao.TblUserMapper.findByPage] - ==>  Preparing: select * from tbl_user where realName like ? and idfrontImgUrl='v' ORDER BY createDate desc LIMIT 10 
+2019-08-08 08:59:23,120 [http-nio-8085-exec-3] DEBUG [com.manage.dao.TblUserMapper.findByPage] - ==> Parameters: %%(String)
+2019-08-08 08:59:23,122 [http-nio-8085-exec-3] DEBUG [com.manage.dao.TblUserMapper.findByPage] - <==      Total: 6

@@ -1,0 +1,211 @@
+2019-07-12 09:45:06,672 [Thread-3] INFO  [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext] - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4f3bbf68: startup date [Thu Jul 11 18:54:02 CST 2019]; root of context hierarchy
+2019-07-12 09:45:06,682 [Thread-3] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Unregistering JMX-exposed beans on shutdown
+2019-07-12 09:45:06,682 [Thread-3] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Unregistering JMX-exposed beans
+2019-07-12 09:45:06,688 [Thread-3] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2019-07-12 10:02:58,514 [main] INFO  [com.manage.ManageTestApplication] - Starting ManageTestApplication on PC-20190121KZCT with PID 8512 (E:\idea_project_company\visitor_company\target\classes started by Administrator in E:\idea_project_company\visitor_company)
+2019-07-12 10:02:58,516 [main] INFO  [com.manage.ManageTestApplication] - No active profile set, falling back to default profiles: default
+2019-07-12 10:02:58,559 [main] INFO  [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4f3bbf68: startup date [Fri Jul 12 10:02:58 CST 2019]; root of context hierarchy
+2019-07-12 10:02:58,639 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 5.3.5.Final
+2019-07-12 10:02:59,358 [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'druidDataSourceConfig' of type [com.manage.conf.DruidDataSourceConfig$$EnhancerBySpringCGLIB$$b6bff862] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-12 10:02:59,810 [main] INFO  [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] - Tomcat initialized with port(s): 8085 (http)
+2019-07-12 10:02:59,819 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2019-07-12 10:02:59,820 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-07-12 10:02:59,916 [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2019-07-12 10:02:59,916 [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 1357 ms
+2019-07-12 10:03:00,051 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-07-12 10:03:00,053 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-12 10:03:00,056 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-12 10:03:00,057 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-12 10:03:00,057 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-12 10:03:00,057 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-12 10:03:00,057 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-07-12 10:03:00,057 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'corsFilter' to: [/*]
+2019-07-12 10:03:00,474 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2019-07-12 10:03:01,502 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4f3bbf68: startup date [Fri Jul 12 10:02:58 CST 2019]; root of context hierarchy
+2019-07-12 10:03:01,510 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - Detected @ModelAttribute methods in myControllerAdvice
+2019-07-12 10:03:01,510 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - Detected @InitBinder methods in myControllerAdvice
+2019-07-12 10:03:01,640 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuth/getAuth]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthController.getAuth(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,641 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuth/getRoleAuth]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthController.getRoleAuth(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,642 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuthRange/newGetAllMenu]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthRangeController.newGetAllMenu(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,642 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuthRange/newGetMenuButton]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthRangeController.newGetMenuButton(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,643 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuthRange/newAddAuthBatch]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthRangeController.newAddAuthBatch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,643 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/kaptcha/imgCode]}" onto public void com.manage.controller.code.VerificationCodeImageController.getKaptchaImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,644 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/company/exitApplyType]}" onto public com.manage.utils.result.Result com.manage.controller.company.CompanyController.exitApplyType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,645 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/resetPassWord]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.resetPassWord(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,646 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/updateOper]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.updateOper(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,646 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/saveOper]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.saveOper(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,646 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/getOrgPageOper]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.getOrgPageOper(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,java.lang.Integer) throws java.lang.Exception
+2019-07-12 10:03:01,646 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/delOperBatch]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.delOperBatch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,647 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyRole/del]}" onto public com.manage.utils.result.Result com.manage.controller.companyRole.CompanyRoleController.del(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,648 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyRole/getAllRole]}" onto public com.manage.utils.result.Result com.manage.controller.companyRole.CompanyRoleController.getAuth(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,648 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyRole/addOrEdit]}" onto public com.manage.utils.result.Result com.manage.controller.companyRole.CompanyRoleController.addOrEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,651 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companySection/findByPage]}" onto public com.manage.utils.result.Result com.manage.controller.companySection.CompanySectionController.findByPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,java.lang.Integer) throws java.lang.Exception
+2019-07-12 10:03:01,651 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companySection/findByAll]}" onto public com.manage.utils.result.Result com.manage.controller.companySection.CompanySectionController.findByAll(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,652 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companySection/addOrExit]}" onto public com.manage.utils.result.Result com.manage.controller.companySection.CompanySectionController.addNews(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,652 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companySection/delete]}" onto public com.manage.utils.result.Result com.manage.controller.companySection.CompanySectionController.deleteNews(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,653 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyUser/findByPage]}" onto public com.manage.utils.result.Result com.manage.controller.companyUser.CompanyUserController.findByPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,java.lang.Integer) throws java.lang.Exception
+2019-07-12 10:03:01,653 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyUser/delete]}" onto public com.manage.utils.result.Result com.manage.controller.companyUser.CompanyUserController.deleteNews(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,654 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyUser/upload],methods=[POST],consumes=[multipart/form-data]}" onto public com.manage.utils.result.Result com.manage.controller.companyUser.CompanyUserController.upload(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,654 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyUser/addOrExit]}" onto public com.manage.utils.result.Result com.manage.controller.companyUser.CompanyUserController.addOrExit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,655 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/login/login]}" onto public com.manage.utils.result.Result com.manage.controller.login.LoginController.verificationUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,655 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/login/changePassword]}" onto public com.manage.utils.result.Result com.manage.controller.login.LoginController.changePassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,655 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/login/logout]}" onto public com.manage.utils.result.Result com.manage.controller.login.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-12 10:03:01,657 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-12 10:03:01,657 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-12 10:03:01,684 [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-12 10:03:01,684 [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-12 10:03:01,698 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] - Detected @ExceptionHandler methods in exceptionProcessAdvice
+2019-07-12 10:03:01,699 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] - Detected @ExceptionHandler methods in myControllerAdvice
+2019-07-12 10:03:01,719 [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-12 10:03:02,041 [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Registering beans for JMX exposure on startup
+2019-07-12 10:03:02,042 [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-07-12 10:03:02,046 [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-07-12 10:03:02,056 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2019-07-12 10:03:02,065 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2019-07-12 10:03:02,073 [main] INFO  [org.apache.tomcat.util.net.NioSelectorPool] - Using a shared selector for servlet write/read
+2019-07-12 10:03:02,089 [main] INFO  [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] - Tomcat started on port(s): 8085 (http)
+2019-07-12 10:03:02,092 [main] INFO  [com.manage.ManageTestApplication] - Started ManageTestApplication in 3.867 seconds (JVM running for 5.111)
+2019-07-12 10:03:16,019 [http-nio-8085-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-12 10:03:16,019 [http-nio-8085-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-12 10:03:16,047 [http-nio-8085-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2019-07-12 10:03:16,068 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 10:03:24,862 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 10:03:25,155 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 10:03:25,219 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 10:03:31,140 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 10:05:45,649 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 10:11:45,449 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 10:22:01,661 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 10:23:36,943 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 10:26:59,850 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 10:34:58,680 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 10:36:32,663 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companySection/findByPage
+2019-07-12 10:36:47,778 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 10:40:36,027 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 10:47:01,050 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 10:47:02,628 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 10:47:09,777 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 10:53:07,369 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 10:53:08,746 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 10:53:15,261 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 10:54:38,664 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:03:28,386 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:03:29,857 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:03:37,862 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 11:07:10,980 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:08:32,602 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/delete
+2019-07-12 11:08:32,671 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:09:57,821 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:11:18,751 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:12:44,703 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:12:48,331 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 11:12:48,368 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:12:48,707 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:12:57,919 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companySection/findByPage
+2019-07-12 11:14:24,235 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:14:29,137 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:14:41,614 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 11:14:41,649 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:14:41,707 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:14:47,384 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:14:57,447 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 11:24:31,475 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:24:39,580 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:25:16,219 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/delete
+2019-07-12 11:25:16,267 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:26:45,558 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:36:31,318 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:36:37,910 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 11:36:37,950 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:36:38,304 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:42:07,628 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:42:11,782 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:42:17,899 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:42:23,424 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 11:42:23,450 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:42:32,413 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 11:42:32,446 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:42:32,817 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:43:13,626 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:43:19,955 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 11:43:19,985 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 11:43:20,381 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:46:59,160 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:48:09,472 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 11:50:56,777 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:51:37,541 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/delete
+2019-07-12 11:51:37,591 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 11:54:35,906 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 11:55:36,833 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 12:53:24,216 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 12:53:24,351 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 12:53:33,943 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 12:53:33,983 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 12:53:34,384 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 14:05:53,216 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 14:06:00,286 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 14:06:00,327 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 14:06:00,682 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 14:06:08,527 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 14:12:15,933 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 14:14:35,431 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 14:24:49,747 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 14:32:18,773 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/delete
+2019-07-12 14:32:18,831 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 14:32:45,787 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 14:32:47,406 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 14:34:33,594 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 14:44:55,947 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 14:45:00,757 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 14:45:12,967 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 14:45:13,002 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 14:45:13,395 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 14:45:18,690 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 14:45:32,856 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 14:45:34,750 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 14:45:47,463 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/upload
+2019-07-12 14:48:20,999 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 15:13:41,322 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 15:13:43,079 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 15:36:06,587 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 15:36:24,979 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 15:36:39,042 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 15:36:43,300 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 15:36:50,576 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 15:36:50,616 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 15:36:50,982 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 15:37:35,778 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 15:37:46,330 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 15:40:09,633 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 16:03:33,685 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:04:41,131 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 16:04:41,163 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:04:41,512 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 16:05:32,456 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:05:40,124 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 16:05:40,148 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:05:40,564 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 16:20:44,870 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 16:21:05,051 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:21:11,616 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 16:21:11,659 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:21:12,056 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 16:21:31,830 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:21:43,704 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 16:21:43,725 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:21:53,147 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 16:21:53,180 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:21:53,592 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 16:21:57,493 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 16:25:59,316 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:26:16,537 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 16:26:16,576 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 16:26:16,646 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 16:26:21,677 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage
+2019-07-12 16:44:12,540 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companySection/findByAll
+2019-07-12 17:06:20,826 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 17:06:38,165 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 17:06:41,776 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-12 17:06:41,838 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-12 17:06:42,130 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-12 17:23:02,063 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyUser/findByPage

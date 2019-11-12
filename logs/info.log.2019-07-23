@@ -1,0 +1,283 @@
+2019-07-23 15:23:08,315 [main] INFO  [com.manage.ManageTestApplication] - Starting ManageTestApplication on PC-20190121KZCT with PID 6240 (E:\idea_project_company\visitor_company\target\classes started by Administrator in E:\idea_project_company\visitor_company)
+2019-07-23 15:23:08,319 [main] INFO  [com.manage.ManageTestApplication] - No active profile set, falling back to default profiles: default
+2019-07-23 15:23:08,382 [main] INFO  [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58ce9668: startup date [Tue Jul 23 15:23:08 CST 2019]; root of context hierarchy
+2019-07-23 15:23:08,493 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 5.3.5.Final
+2019-07-23 15:23:09,518 [main] INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'druidDataSourceConfig' of type [com.manage.conf.DruidDataSourceConfig$$EnhancerBySpringCGLIB$$f70a7d4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-23 15:23:09,960 [main] INFO  [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] - Tomcat initialized with port(s): 8085 (http)
+2019-07-23 15:23:09,972 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2019-07-23 15:23:09,973 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-07-23 15:23:10,064 [localhost-startStop-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2019-07-23 15:23:10,065 [localhost-startStop-1] INFO  [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 1683 ms
+2019-07-23 15:23:10,224 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-07-23 15:23:10,225 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-23 15:23:10,229 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-23 15:23:10,229 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-23 15:23:10,229 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-23 15:23:10,230 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-23 15:23:10,230 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-07-23 15:23:10,230 [localhost-startStop-1] INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] - Mapping filter: 'corsFilter' to: [/*]
+2019-07-23 15:23:10,660 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2019-07-23 15:23:11,865 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58ce9668: startup date [Tue Jul 23 15:23:08 CST 2019]; root of context hierarchy
+2019-07-23 15:23:11,874 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - Detected @ModelAttribute methods in myControllerAdvice
+2019-07-23 15:23:11,874 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - Detected @InitBinder methods in myControllerAdvice
+2019-07-23 15:23:11,921 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuth/getAuth]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthController.getAuth(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,922 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuth/getRoleAuth]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthController.getRoleAuth(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,923 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuthRange/newGetAllMenu]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthRangeController.newGetAllMenu(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,924 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuthRange/newGetMenuButton]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthRangeController.newGetMenuButton(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,924 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyAuthRange/newAddAuthBatch]}" onto public com.manage.utils.result.Result com.manage.controller.auth.CompanyAuthRangeController.newAddAuthBatch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,924 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/kaptcha/imgCode]}" onto public void com.manage.controller.code.VerificationCodeImageController.getKaptchaImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,925 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/company/exitApplyType]}" onto public com.manage.utils.result.Result com.manage.controller.company.CompanyController.exitApplyType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,926 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/saveOper]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.saveOper(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,926 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/getOrgPageOper]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.getOrgPageOper(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,java.lang.Integer) throws java.lang.Exception
+2019-07-23 15:23:11,927 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/resetPassWord]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.resetPassWord(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,927 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/updateOper]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.updateOper(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,927 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyOper/delOperBatch]}" onto public com.manage.utils.result.Result com.manage.controller.companyOper.CompanyOperController.delOperBatch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,928 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyRole/del]}" onto public com.manage.utils.result.Result com.manage.controller.companyRole.CompanyRoleController.del(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,929 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyRole/getAllRole]}" onto public com.manage.utils.result.Result com.manage.controller.companyRole.CompanyRoleController.getAuth(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,929 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyRole/addOrEdit]}" onto public com.manage.utils.result.Result com.manage.controller.companyRole.CompanyRoleController.addOrEdit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,932 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companySection/findByPage]}" onto public com.manage.utils.result.Result com.manage.controller.companySection.CompanySectionController.findByPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,java.lang.Integer) throws java.lang.Exception
+2019-07-23 15:23:11,932 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companySection/delete]}" onto public com.manage.utils.result.Result com.manage.controller.companySection.CompanySectionController.deleteNews(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,933 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companySection/addOrExit]}" onto public com.manage.utils.result.Result com.manage.controller.companySection.CompanySectionController.addNews(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,933 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companySection/findByAll]}" onto public com.manage.utils.result.Result com.manage.controller.companySection.CompanySectionController.findByAll(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,934 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyUser/findByPage]}" onto public com.manage.utils.result.Result com.manage.controller.companyUser.CompanyUserController.findByPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,java.lang.Integer) throws java.lang.Exception
+2019-07-23 15:23:11,935 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyUser/delete]}" onto public com.manage.utils.result.Result com.manage.controller.companyUser.CompanyUserController.deleteNews(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,935 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyUser/upload],methods=[POST],consumes=[multipart/form-data]}" onto public com.manage.utils.result.Result com.manage.controller.companyUser.CompanyUserController.upload(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,935 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/companyUser/addOrExit]}" onto public com.manage.utils.result.Result com.manage.controller.companyUser.CompanyUserController.addOrExit(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,936 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/login/changePassword]}" onto public com.manage.utils.result.Result com.manage.controller.login.LoginController.changePassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,936 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/login/login]}" onto public com.manage.utils.result.Result com.manage.controller.login.LoginController.verificationUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,936 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/login/logout]}" onto public com.manage.utils.result.Result com.manage.controller.login.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,937 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/yaoyue/getReason]}" onto public com.manage.utils.result.Result com.manage.controller.YaoyueController.getReason(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,937 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/yaoyue/hasRuleYaoyue]}" onto public com.manage.utils.result.Result com.manage.controller.YaoyueController.hasRuleYaoyue(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Integer,java.lang.Integer) throws java.lang.Exception
+2019-07-23 15:23:11,937 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/yaoyue/isyaoyueone]}" onto public com.manage.utils.result.Result com.manage.controller.YaoyueController.isyaoyueone(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-07-23 15:23:11,939 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-23 15:23:11,939 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-23 15:23:11,969 [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-23 15:23:11,969 [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-23 15:23:11,985 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] - Detected @ExceptionHandler methods in exceptionProcessAdvice
+2019-07-23 15:23:11,985 [main] INFO  [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] - Detected @ExceptionHandler methods in myControllerAdvice
+2019-07-23 15:23:12,005 [main] INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-23 15:23:12,354 [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Registering beans for JMX exposure on startup
+2019-07-23 15:23:12,355 [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-07-23 15:23:12,360 [main] INFO  [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-07-23 15:23:12,374 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2019-07-23 15:23:12,385 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2019-07-23 15:23:12,393 [main] INFO  [org.apache.tomcat.util.net.NioSelectorPool] - Using a shared selector for servlet write/read
+2019-07-23 15:23:12,411 [main] INFO  [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] - Tomcat started on port(s): 8085 (http)
+2019-07-23 15:23:12,415 [main] INFO  [com.manage.ManageTestApplication] - Started ManageTestApplication in 4.559 seconds (JVM running for 5.259)
+2019-07-23 15:24:16,109 [http-nio-8085-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-23 15:24:16,110 [http-nio-8085-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-23 15:24:16,140 [http-nio-8085-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2019-07-23 15:24:16,164 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 15:24:27,593 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 15:24:27,920 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 15:24:28,030 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 15:24:38,370 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 15:28:55,919 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:10:07,770 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:10:08,008 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 16:10:19,674 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 16:10:19,718 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 16:10:20,157 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:10:25,181 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:15:41,002 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:15:42,995 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:16:42,072 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:23:09,384 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:23:09,470 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:23:11,404 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:23:11,527 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:23:53,037 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:23:53,111 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:23:54,902 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:23:54,995 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:23:56,274 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:23:56,686 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:25:18,299 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:25:18,374 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:25:19,604 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:25:19,694 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:25:20,527 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:25:20,637 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:25:21,480 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:25:21,595 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:25:54,582 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:25:55,203 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:27:12,191 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:27:12,275 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:27:13,496 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:27:13,599 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:27:14,426 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:27:14,537 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:27:15,308 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:27:15,408 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:27:16,024 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:27:16,129 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:46:22,355 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:46:22,426 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 16:46:47,960 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 16:46:56,826 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 16:46:56,841 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 16:47:01,765 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 16:47:01,815 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 16:47:02,205 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:47:05,497 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/isyaoyueone
+2019-07-23 16:50:05,872 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:50:20,868 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/isyaoyueone
+2019-07-23 16:56:46,044 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 16:56:49,342 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 17:03:44,955 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 17:03:46,530 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 17:05:10,242 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 17:05:11,652 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 17:28:43,117 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 17:28:44,471 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 17:28:59,745 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 17:29:30,869 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 17:29:41,269 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 17:29:48,367 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 17:29:48,412 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 17:29:48,745 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 17:30:07,429 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 17:30:11,680 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 17:44:17,515 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyOper/getOrgPageOper
+2019-07-23 17:44:20,963 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 17:48:18,711 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyOper/getOrgPageOper
+2019-07-23 18:06:45,710 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:07:55,815 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:08:07,130 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 18:08:07,170 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:08:07,523 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:08:10,090 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:08:19,312 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:09:07,969 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:10:59,919 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:10:59,920 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:11:46,494 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:12:43,222 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:20:12,503 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:20:19,094 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:20:36,761 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:20:43,125 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:20:46,914 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 18:20:46,953 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:20:47,271 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:20:50,622 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:20:52,022 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:21:02,335 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:21:04,013 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:21:08,018 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:21:09,563 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:21:11,249 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:21:44,655 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:21:44,730 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:21:46,191 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:21:50,383 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:21:51,950 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:21:53,627 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:22:24,234 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:22:24,308 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:22:28,611 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:22:37,504 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 18:22:37,538 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:22:37,943 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:22:40,699 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:22:42,127 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:22:44,703 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:28:04,004 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:28:04,077 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:28:12,751 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:28:22,491 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:28:26,239 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 18:28:26,286 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:28:26,601 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:28:30,817 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:28:32,712 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:28:35,889 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:28:37,810 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:28:39,346 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:28:42,233 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:28:44,820 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:29:25,115 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:29:25,238 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:29:26,375 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:29:28,091 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:29:29,528 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:29:33,387 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:29:34,366 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:29:36,003 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:29:37,117 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:35:42,566 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:35:51,155 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 18:35:51,171 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:35:55,893 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 18:35:55,919 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:36:00,026 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 18:36:00,071 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:36:00,483 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:36:03,876 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:36:06,228 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:37:30,545 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:37:40,035 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:38:37,682 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/getReason
+2019-07-23 18:49:54,068 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:50:04,203 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:50:04,304 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:50:10,589 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:50:31,101 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/getReason
+2019-07-23 18:51:58,192 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:53:21,949 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:53:31,747 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 18:53:31,799 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 18:53:32,121 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 18:53:34,526 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:53:41,104 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:53:51,530 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/getReason
+2019-07-23 18:54:50,686 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:55:02,298 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:55:33,990 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/getReason
+2019-07-23 18:56:43,333 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 18:56:54,373 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 18:57:01,288 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/getReason
+2019-07-23 18:58:09,883 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 19:02:16,387 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:02:26,746 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 19:02:26,758 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:02:31,862 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 19:02:31,909 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:02:31,989 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 19:02:39,051 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 19:02:45,866 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 19:03:58,204 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:04:09,576 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 19:04:09,596 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:04:17,245 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 19:04:17,266 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:04:21,947 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 19:04:21,962 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:04:27,611 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 19:04:27,645 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:04:28,038 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 19:04:31,934 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 19:04:53,470 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 19:05:12,722 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 19:06:09,076 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 19:17:13,304 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 19:17:13,305 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 19:17:21,611 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 19:17:23,825 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 19:18:08,818 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 19:18:10,077 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 19:18:38,916 [http-nio-8085-exec-10] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:18:48,685 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 19:18:48,704 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:18:52,959 [http-nio-8085-exec-9] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 19:18:53,019 [http-nio-8085-exec-8] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:18:53,105 [http-nio-8085-exec-3] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 19:18:56,871 [http-nio-8085-exec-1] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 19:18:58,101 [http-nio-8085-exec-4] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole
+2019-07-23 19:26:56,856 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:27:06,005 [http-nio-8085-exec-2] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/login/login
+2019-07-23 19:27:06,037 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/kaptcha/imgCode
+2019-07-23 19:27:06,404 [http-nio-8085-exec-5] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085/companyAuth/getAuth
+2019-07-23 19:29:03,182 [http-nio-8085-exec-6] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//yaoyue/hasRuleYaoyue
+2019-07-23 19:29:57,781 [http-nio-8085-exec-7] INFO  [com.manage.utils.interceptor.AuthInterceptor] - requestUrl:http://127.0.0.1:8085//companyRole/getAllRole

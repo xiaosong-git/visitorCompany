@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.CompanyMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.Company">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="companyCode" jdbcType="VARCHAR" property="companyCode" />
+    <result column="companyName" jdbcType="VARCHAR" property="companyName" />
+    <result column="createDate" jdbcType="VARCHAR" property="createDate" />
+    <result column="createTime" jdbcType="VARCHAR" property="createTime" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="applyType" jdbcType="VARCHAR" property="applyType" />
+    <result column="corporationID" jdbcType="VARCHAR" property="corporationID" />
+    <result column="licenceNo" jdbcType="VARCHAR" property="licenceNo" />
+    <result column="addr" jdbcType="VARCHAR" property="addr" />
+    <result column="orgId" jdbcType="BIGINT" property="orgId" />
+  </resultMap>
+
+  <select id="findById" parameterType="java.lang.Integer" resultType="com.manage.model.Company">
+    select *
+    from tbl_company
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <update id="updateApplyType">
+    UPDATE tbl_company set applyType=#{applyType} WHERE id=#{id}
+  </update>
+
+</mapper>

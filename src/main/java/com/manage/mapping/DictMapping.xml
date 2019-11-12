@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.DictMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.Dict">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="dict_code" jdbcType="VARCHAR" property="dict_code" />
+    <result column="dict_text" jdbcType="VARCHAR" property="dict_text" />
+  </resultMap>
+
+  <select id="findAllDict" resultType="com.manage.model.Dict">
+    select id, dict_code, dict_text
+    from t_dict
+  </select>
+</mapper>

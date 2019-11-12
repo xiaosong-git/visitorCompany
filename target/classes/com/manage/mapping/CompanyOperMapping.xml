@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.CompanyOperMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.CompanyOper">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="oper_name" jdbcType="VARCHAR" property="oper_name" />
+    <result column="company_id" jdbcType="BIGINT" property="company_id" />
+    <result column="role_id" jdbcType="BIGINT" property="role_id" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="sstatus" jdbcType="VARCHAR" property="sstatus" />
+    <result column="login_name" jdbcType="VARCHAR" property="login_name" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, oper_name, company_id, role_id, pwd, sstatus, login_name
+  </sql>
+
+  <select id="findByLoginName" parameterType="java.lang.String" resultType="com.manage.model.CompanyOper">
+    select
+    <include refid="Base_Column_List" />
+    from t_company_oper
+    where login_name = #{login_name,jdbcType=VARCHAR}
+  </select>
+
+  <update id="updateByPwd" parameterType="com.manage.model.CompanyOper">
+    update t_company_oper set pwd = #{companyOper.pwd} where id = #{companyOper.id}
+  </update>
+
+  <insert id="addCompanyOper">
+    insert into t_company_oper (oper_name,company_id,role_id,pwd,sstatus,login_name) values
+    (#{companyOper.oper_name},#{companyOper.company_id},#{companyOper.role_id}, #{companyOper.pwd},#{companyOper.sstatus},#{companyOper.login_name})
+  </insert>
+
+  <update id="updateById">
+    update t_company_oper
+    <trim prefix="set" suffixOverrides=",">
+      <if test="companyOper.login_name != null and companyOper.login_name.trim() != ''"> login_name=#{companyOper.login_name},</if>
+      <if test="companyOper.role_id != null"> role_id=#{companyOper.role_id},</if>
+      <if test="companyOper.oper_name != null and companyOper.oper_name.trim() != ''"> oper_name=#{companyOper.oper_name},</if>
+      <if test="companyOper.pwd != null and companyOper.pwd.trim() != ''"> pwd =#{companyOper.pwd},</if>
+    </trim>
+    where id=#{companyOper.id}
+  </update>
+
+  <delete id="batchDelete" parameterType="java.util.List">
+    delete from t_company_oper where id in
+    <foreach collection="ids" item="id" separator="," open="(" close=")">
+      #{id}
+    </foreach>
+  </delete>
+
+  <select id="findByPage" parameterType="java.lang.Long"  resultType="com.manage.model.CompanyOper">
+    select
+    co.*,`c`.companyName companyName,cr.role_name roleName
+    from t_company_oper co
+    left join tbl_company `c` on co.company_id=`c`.id
+    left join t_company_role cr on co.role_id=cr.id
+    <trim prefix="where" prefixOverrides="and | or">
+      co.company_id = #{company_id,jdbcType=BIGINT}
+      <if test="oper_name != null and oper_name.trim() != ''"> AND oper_name like concat(concat('%',#{oper_name}),'%')</if>
+    </trim>
+  </select>
+</mapper>

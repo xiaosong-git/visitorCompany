@@ -1,0 +1,9 @@
+2019-08-22 09:14:43,019 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==>  Preparing: select id, oper_name, company_id, role_id, pwd, sstatus, login_name from t_company_oper where login_name = ? 
+2019-08-22 09:14:43,457 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==> Parameters: xiaoxiao(String)
+2019-08-22 09:14:43,621 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - <==      Total: 1
+2019-08-22 09:15:21,057 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyMapping.findById] - ==>  Preparing: select * from tbl_company where id = ? 
+2019-08-22 09:15:21,085 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyMapping.findById] - ==> Parameters: 40(Integer)
+2019-08-22 09:15:21,096 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyMapping.findById] - <==      Total: 0
+2019-08-22 09:16:31,359 [http-nio-8085-exec-1] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==>  Preparing: select id, oper_name, company_id, role_id, pwd, sstatus, login_name from t_company_oper where login_name = ? 
+2019-08-22 09:16:31,364 [http-nio-8085-exec-1] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==> Parameters: xiaoxiao2(String)
+2019-08-22 09:16:31,369 [http-nio-8085-exec-1] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - <==      Total: 0

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.manage.dao.CompanyDepeMapper" >
+  <resultMap id="BaseResultMap" type="com.manage.model.CompanyDepe" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="sectionCode" property="sectioncode" jdbcType="VARCHAR" />
+    <result column="sectionName" property="sectionname" jdbcType="VARCHAR" />
+    <result column="companyId" property="companyid" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, sectionCode, sectionName, companyId
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.manage.model.CompanyDepeExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from tbl_company_section
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_company_section
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tbl_company_section
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.manage.model.CompanyDepeExample" >
+    delete from tbl_company_section
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.manage.model.CompanyDepe" >
+    insert into tbl_company_section (id, sectionCode, sectionName, 
+      companyId)
+    values (#{id,jdbcType=BIGINT}, #{sectioncode,jdbcType=VARCHAR}, #{sectionname,jdbcType=VARCHAR}, 
+      #{companyid,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.manage.model.CompanyDepe" >
+    insert into tbl_company_section
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sectioncode != null" >
+        sectionCode,
+      </if>
+      <if test="sectionname != null" >
+        sectionName,
+      </if>
+      <if test="companyid != null" >
+        companyId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="sectioncode != null" >
+        #{sectioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionname != null" >
+        #{sectionname,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null" >
+        #{companyid,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.manage.model.CompanyDepeExample" resultType="java.lang.Integer" >
+    select count(*) from tbl_company_section
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update tbl_company_section
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.sectioncode != null" >
+        sectionCode = #{record.sectioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sectionname != null" >
+        sectionName = #{record.sectionname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyid != null" >
+        companyId = #{record.companyid,jdbcType=BIGINT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update tbl_company_section
+    set id = #{record.id,jdbcType=BIGINT},
+      sectionCode = #{record.sectioncode,jdbcType=VARCHAR},
+      sectionName = #{record.sectionname,jdbcType=VARCHAR},
+      companyId = #{record.companyid,jdbcType=BIGINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.manage.model.CompanyDepe" >
+    update tbl_company_section
+    <set >
+      <if test="sectioncode != null" >
+        sectionCode = #{sectioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="sectionname != null" >
+        sectionName = #{sectionname,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null" >
+        companyId = #{companyid,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.manage.model.CompanyDepe" >
+    update tbl_company_section
+    set sectionCode = #{sectioncode,jdbcType=VARCHAR},
+      sectionName = #{sectionname,jdbcType=VARCHAR},
+      companyId = #{companyid,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,51 @@
+2019-07-30 10:37:26,819 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==>  Preparing: select id, oper_name, company_id, role_id, pwd, sstatus, login_name from t_company_oper where login_name = ? 
+2019-07-30 10:37:26,999 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==> Parameters: sa(String)
+2019-07-30 10:37:27,017 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - <==      Total: 1
+2019-07-30 10:37:27,024 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyMapping.findById] - ==>  Preparing: select * from tbl_company where id = ? 
+2019-07-30 10:37:27,026 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyMapping.findById] - ==> Parameters: 0(Integer)
+2019-07-30 10:37:27,027 [http-nio-8085-exec-3] DEBUG [com.manage.dao.CompanyMapping.findById] - <==      Total: 0
+2019-07-30 10:37:27,030 [http-nio-8085-exec-3] DEBUG [com.manage.dao.KeyMapping.findByStatus] - ==>  Preparing: select id, workKey, cstatus, createDate from tbl_key where cstatus=? 
+2019-07-30 10:37:27,030 [http-nio-8085-exec-3] DEBUG [com.manage.dao.KeyMapping.findByStatus] - ==> Parameters: normal(String)
+2019-07-30 10:37:27,032 [http-nio-8085-exec-3] DEBUG [com.manage.dao.KeyMapping.findByStatus] - <==      Total: 1
+2019-07-30 10:37:27,198 [http-nio-8085-exec-6] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==>  Preparing: select m.*, b.id bid, b.btnName, b.btnCode, b.actionUrl, b.menuId, r.id rid, r.role_name, r.sid, r.role_relation_no from t_company_auth a,t_company_menu m,tbl_company_button b,t_company_role r where a.menu_id=m.id and a.button_id=b.id and r.id=a.role_id and a.role_id=? 
+2019-07-30 10:37:27,219 [http-nio-8085-exec-6] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==> Parameters: 1(Long)
+2019-07-30 10:37:27,247 [http-nio-8085-exec-6] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - <==      Total: 18
+2019-07-30 10:38:16,292 [http-nio-8085-exec-2] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==>  Preparing: select id, oper_name, company_id, role_id, pwd, sstatus, login_name from t_company_oper where login_name = ? 
+2019-07-30 10:38:16,292 [http-nio-8085-exec-2] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - ==> Parameters: lisi3(String)
+2019-07-30 10:38:16,293 [http-nio-8085-exec-2] DEBUG [com.manage.dao.CompanyOperMapping.findByLoginName] - <==      Total: 1
+2019-07-30 10:38:16,296 [http-nio-8085-exec-2] DEBUG [com.manage.dao.CompanyMapping.findById] - ==>  Preparing: select * from tbl_company where id = ? 
+2019-07-30 10:38:16,297 [http-nio-8085-exec-2] DEBUG [com.manage.dao.CompanyMapping.findById] - ==> Parameters: 36(Integer)
+2019-07-30 10:38:16,298 [http-nio-8085-exec-2] DEBUG [com.manage.dao.CompanyMapping.findById] - <==      Total: 1
+2019-07-30 10:38:16,300 [http-nio-8085-exec-2] DEBUG [com.manage.dao.OrgMapping.selectByPrimaryKey] - ==>  Preparing: SELECT id,org_code,org_name,sid,istop,org_icon,relation_no,sstatus,orgType,realName,phone,addr,createDate,province,city,area FROM t_org WHERE id = ? 
+2019-07-30 10:38:16,303 [http-nio-8085-exec-2] DEBUG [com.manage.dao.OrgMapping.selectByPrimaryKey] - ==> Parameters: 62(Long)
+2019-07-30 10:38:16,305 [http-nio-8085-exec-2] DEBUG [com.manage.dao.OrgMapping.selectByPrimaryKey] - <==      Total: 1
+2019-07-30 10:38:16,307 [http-nio-8085-exec-2] DEBUG [com.manage.dao.KeyMapping.findByStatus] - ==>  Preparing: select id, workKey, cstatus, createDate from tbl_key where cstatus=? 
+2019-07-30 10:38:16,308 [http-nio-8085-exec-2] DEBUG [com.manage.dao.KeyMapping.findByStatus] - ==> Parameters: normal(String)
+2019-07-30 10:38:16,309 [http-nio-8085-exec-2] DEBUG [com.manage.dao.KeyMapping.findByStatus] - <==      Total: 1
+2019-07-30 10:38:16,407 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==>  Preparing: select m.*, b.id bid, b.btnName, b.btnCode, b.actionUrl, b.menuId, r.id rid, r.role_name, r.sid, r.role_relation_no from t_company_auth a,t_company_menu m,tbl_company_button b,t_company_role r where a.menu_id=m.id and a.button_id=b.id and r.id=a.role_id and a.role_id=? 
+2019-07-30 10:38:16,408 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - ==> Parameters: 2(Long)
+2019-07-30 10:38:16,422 [http-nio-8085-exec-5] DEBUG [com.manage.dao.CompanyAuthMapping.findMenu] - <==      Total: 22
+2019-07-30 10:38:21,780 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-07-30 10:38:21,782 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 16(Long), 2(Long), 44(Long)
+2019-07-30 10:38:21,784 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-07-30 10:38:21,787 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-07-30 10:38:21,788 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 44(Long)
+2019-07-30 10:38:21,790 [http-nio-8085-exec-7] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-07-30 10:38:33,841 [http-nio-8085-exec-7] DEBUG [com.manage.dao.yaoRecordMapper.findByPage_COUNT] - ==>  Preparing: SELECT count(0) FROM yaoyue_record 
+2019-07-30 10:38:33,875 [http-nio-8085-exec-7] DEBUG [com.manage.dao.yaoRecordMapper.findByPage_COUNT] - ==> Parameters: 
+2019-07-30 10:38:33,879 [http-nio-8085-exec-7] DEBUG [com.manage.dao.yaoRecordMapper.findByPage_COUNT] - <==      Total: 1
+2019-07-30 10:38:33,884 [http-nio-8085-exec-7] DEBUG [com.manage.dao.yaoRecordMapper.findByPage] - ==>  Preparing: select * from yaoyue_record order by endDate desc LIMIT 10 
+2019-07-30 10:38:33,897 [http-nio-8085-exec-7] DEBUG [com.manage.dao.yaoRecordMapper.findByPage] - ==> Parameters: 
+2019-07-30 10:38:33,920 [http-nio-8085-exec-7] DEBUG [com.manage.dao.yaoRecordMapper.findByPage] - <==      Total: 10
+2019-07-30 10:39:00,149 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==>  Preparing: select id, menu_id, role_id, button_id from t_company_auth where menu_id = ? and role_id = ? and button_id = ? 
+2019-07-30 10:39:00,149 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - ==> Parameters: 11(Long), 2(Long), 29(Long)
+2019-07-30 10:39:00,150 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyAuthMapping.selectBybtnIdAndRoleIdAndMenuId] - <==      Total: 1
+2019-07-30 10:39:00,151 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==>  Preparing: select id, btnName, btnCode, actionUrl, menuId from tbl_company_button where id = ? 
+2019-07-30 10:39:00,152 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - ==> Parameters: 29(Long)
+2019-07-30 10:39:00,154 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyButtonMapping.findById] - <==      Total: 1
+2019-07-30 10:39:00,155 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyRoleMapping.findById] - ==>  Preparing: select o.*,o1.role_name s_name from t_company_role o left join t_company_role o1 on o.sid=o1.id where o.id=? 
+2019-07-30 10:39:00,157 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyRoleMapping.findById] - ==> Parameters: 2(Long)
+2019-07-30 10:39:00,159 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyRoleMapping.findById] - <==      Total: 1
+2019-07-30 10:39:00,161 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyRoleMapping.findLowerRole] - ==>  Preparing: select o.*,o1.role_name s_name from t_company_role o left join t_company_role o1 on o.sid=o1.id where o.role_relation_no like ? order by o.id 
+2019-07-30 10:39:00,162 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyRoleMapping.findLowerRole] - ==> Parameters: 1.2.%(String)
+2019-07-30 10:39:00,173 [http-nio-8085-exec-9] DEBUG [com.manage.dao.CompanyRoleMapping.findLowerRole] - <==      Total: 1

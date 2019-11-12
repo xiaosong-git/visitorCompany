@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.CompanyMenuMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.CompanyMenu">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="menu_code" jdbcType="VARCHAR" property="menu_code" />
+    <result column="menu_name" jdbcType="VARCHAR" property="menu_name" />
+    <result column="menu_url" jdbcType="VARCHAR" property="menu_url" />
+    <result column="sid" jdbcType="BIGINT" property="sid" />
+    <result column="istop" jdbcType="VARCHAR" property="istop" />
+    <result column="menu_icon" jdbcType="VARCHAR" property="menu_icon" />
+    <result column="sstatus" jdbcType="VARCHAR" property="sstatus" />
+    <result column="relation_no" jdbcType="VARCHAR" property="relation_no" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="isshortcut" jdbcType="VARCHAR" property="isshortcut" />
+    <result column="iconImgUrl" jdbcType="VARCHAR" property="iconImgUrl" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, menu_code, menu_name, menu_url, sid, istop, menu_icon, sstatus, relation_no,
+    remarks
+  </sql>
+
+  <select id="selectAll" resultType="com.manage.model.CompanyMenu">
+    select
+    <include refid="Base_Column_List" />
+    from t_company_menu
+  </select>
+</mapper>

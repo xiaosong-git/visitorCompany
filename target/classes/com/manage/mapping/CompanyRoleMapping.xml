@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.CompanyRoleMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.CompanyRole">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="role_name" jdbcType="VARCHAR" property="role_name" />
+    <result column="sid" jdbcType="BIGINT" property="sid" />
+    <result column="role_relation_no" jdbcType="VARCHAR" property="role_relation_no" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, role_name, sid, role_relation_no
+  </sql>
+
+  <select id="selectAll" resultType="com.manage.model.CompanyRole">
+    select
+    <include refid="Base_Column_List" />
+    from t_company_role
+  </select>
+
+  <!-- 查询本级以及下级的角色 LZ-->
+  <select id="findLowerRole" resultType="com.manage.model.CompanyRole">
+    select o.*,o1.role_name s_name
+    from t_company_role o
+    left join t_company_role o1 on o.sid=o1.id
+    where o.role_relation_no like #{relation_no}
+    order by o.id
+  </select>
+
+  <!-- 通过角色Id查询 LZ-->
+  <select id="findById" resultType="com.manage.model.CompanyRole">
+    select o.*,o1.role_name s_name
+    from t_company_role o
+    left join t_company_role o1 on o.sid=o1.id
+    where o.id=#{id}
+  </select>
+
+  <insert id="add">
+    insert into t_company_role (role_name,sid,role_relation_no) values (#{role.role_name},#{role.sid},#{role.role_relation_no})
+  </insert>
+
+  <update id="update">
+    update t_company_role set role_name = #{role.role_name},sid=#{role.sid} where id = #{role.id}
+  </update>
+
+  <delete id="batchDelete" parameterType="java.util.List">
+    DELETE FROM t_company_role WHERE id =#{id}
+  </delete>
+
+  <select id="findByRoleRelationNo" resultType="com.manage.model.CompanyRole">
+    select *
+    from t_company_role
+    <trim prefix="where" prefixOverrides="and | or">
+      <if test="role_relation_no != null and role_relation_no.trim() != ''">and role_relation_no like concat((#{role_relation_no}),'%') and role_relation_no !=#{role_relation_no}</if>
+    </trim>
+  </select>
+
+  <select id="findByAllRelationNo" resultType="com.manage.model.CompanyRole">
+    select *
+    from t_company_role
+    <trim prefix="where" prefixOverrides="and | or">
+      <if test="role_relation_no != null and role_relation_no.trim() != ''"> and role_relation_no like concat((#{role_relation_no}),'%')</if>
+    </trim>
+  </select>
+</mapper>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manage.dao.CompanySectionMapping">
+  <resultMap id="BaseResultMap" type="com.manage.model.CompanySection">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="sectionCode" jdbcType="VARCHAR" property="sectionCode" />
+    <result column="sectionName" jdbcType="VARCHAR" property="sectionName" />
+    <result column="companyId" jdbcType="BIGINT" property="companyId" />
+  </resultMap>
+
+  <select id="findByPage" resultType="com.manage.model.CompanySection">
+  select cs.*
+  from tbl_company_section cs
+  left join tbl_company c on cs.companyId = c.id
+  <trim prefix="where" prefixOverrides="and | or">
+    and cs.companyId = #{companyId}
+    <if test="sectionName != null and sectionName.trim() != ''"> and cs.sectionName like concat(concat('%',#{sectionName}),'%')</if>
+  </trim>
+</select>
+
+  <select id="findByAll" resultType="com.manage.model.CompanySection">
+    select cs.*
+    from tbl_company_section cs
+    left join tbl_company c on cs.companyId = c.id
+    WHERE cs.companyId = #{companyId}
+  </select>
+
+  <insert id="add" parameterType="com.manage.model.CompanySection">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tbl_company_section (sectionCode,sectionName,companyId)
+    values (#{companySection.sectionCode},#{companySection.sectionName},#{companySection.companyId})
+  </insert>
+
+  <update id="update">
+    UPDATE tbl_company_section set sectionCode=#{companySection.sectionCode},sectionName=#{companySection.sectionName},companyId=#{companySection.companyId} WHERE id=#{companySection.id}
+  </update>
+
+  <delete id="del" parameterType="java.util.List">
+    DELETE FROM tbl_company_section WHERE id in
+    <foreach close=")" collection="ids" item="id" open="(" separator=",">
+      #{id}
+    </foreach>
+  </delete>
+
+  <select id="findByParam" resultType="com.manage.model.CompanySection">
+    select * from tbl_company_section
+    <trim prefix="where" prefixOverrides="and | or">
+      <if test="paramText != null and paramText.trim() !=''and paramName == 'sectionCode'.toString() "> AND sectionCode = #{paramText}</if>
+    </trim>
+  </select>
+  <select id="findBySectionNameAndcompanyId" resultType="com.manage.model.CompanySection">
+    select * from tbl_company_section
+    where sectionName = #{sectionName} and companyId = #{companyId}
+  </select>
+</mapper>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.manage.dao.yaoRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.manage.model.yaoRecord" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="visitDate" property="visitdate" jdbcType="VARCHAR" />
+    <result column="userId" property="userid" jdbcType="VARCHAR" />
+    <result column="reason" property="reason" jdbcType="VARCHAR" />
+    <result column="cstatus" property="cstatus" jdbcType="VARCHAR" />
+    <result column="endDate" property="enddate" jdbcType="VARCHAR" />
+    <result column="answerContent" property="answercontent" jdbcType="VARCHAR" />
+    <result column="orgCode" property="orgcode" jdbcType="VARCHAR" />
+    <result column="companyId" property="companyid" jdbcType="BIGINT" />
+    <result column="yaoyuetitle" property="yaoyuetitle" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, visitDate, userId, reason, cstatus, endDate, answerContent, orgCode, companyId, 
+    yaoyuetitle
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.manage.model.yaoRecordExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from yaoyue_record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select
+    <include refid="Base_Column_List" />
+    from yaoyue_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from yaoyue_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.manage.model.yaoRecordExample" >
+    delete from yaoyue_record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.manage.model.yaoRecord" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into yaoyue_record (visitDate, userId, reason,
+    cstatus, endDate, answerContent,
+    orgCode, companyId, yaoyuetitle
+    )
+    values (#{visitdate,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR}, #{reason,jdbcType=VARCHAR},
+    #{cstatus,jdbcType=VARCHAR}, #{enddate,jdbcType=VARCHAR}, #{answercontent,jdbcType=VARCHAR},
+    #{orgcode,jdbcType=VARCHAR}, #{companyid,jdbcType=BIGINT}, #{yaoyuetitle,jdbcType=VARCHAR}
+    )
+  </insert>
+  <insert id="insertSelective" parameterType="com.manage.model.yaoRecord" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into yaoyue_record
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="visitdate != null" >
+        visitDate,
+      </if>
+      <if test="userid != null" >
+        userId,
+      </if>
+      <if test="reason != null" >
+        reason,
+      </if>
+      <if test="cstatus != null" >
+        cstatus,
+      </if>
+      <if test="enddate != null" >
+        endDate,
+      </if>
+      <if test="answercontent != null" >
+        answerContent,
+      </if>
+      <if test="orgcode != null" >
+        orgCode,
+      </if>
+      <if test="companyid != null" >
+        companyId,
+      </if>
+      <if test="yaoyuetitle != null" >
+        yaoyuetitle,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="visitdate != null" >
+        #{visitdate,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="reason != null" >
+        #{reason,jdbcType=VARCHAR},
+      </if>
+      <if test="cstatus != null" >
+        #{cstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="enddate != null" >
+        #{enddate,jdbcType=VARCHAR},
+      </if>
+      <if test="answercontent != null" >
+        #{answercontent,jdbcType=VARCHAR},
+      </if>
+      <if test="orgcode != null" >
+        #{orgcode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null" >
+        #{companyid,jdbcType=BIGINT},
+      </if>
+      <if test="yaoyuetitle != null" >
+        #{yaoyuetitle,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.manage.model.yaoRecordExample" resultType="java.lang.Integer" >
+    select count(*) from yaoyue_record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update yaoyue_record
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.visitdate != null" >
+        visitDate = #{record.visitdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userid != null" >
+        userId = #{record.userid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reason != null" >
+        reason = #{record.reason,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cstatus != null" >
+        cstatus = #{record.cstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enddate != null" >
+        endDate = #{record.enddate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.answercontent != null" >
+        answerContent = #{record.answercontent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.orgcode != null" >
+        orgCode = #{record.orgcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyid != null" >
+        companyId = #{record.companyid,jdbcType=BIGINT},
+      </if>
+      <if test="record.yaoyuetitle != null" >
+        yaoyuetitle = #{record.yaoyuetitle,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update yaoyue_record
+    set id = #{record.id,jdbcType=BIGINT},
+    visitDate = #{record.visitdate,jdbcType=VARCHAR},
+    userId = #{record.userid,jdbcType=VARCHAR},
+    reason = #{record.reason,jdbcType=VARCHAR},
+    cstatus = #{record.cstatus,jdbcType=VARCHAR},
+    endDate = #{record.enddate,jdbcType=VARCHAR},
+    answerContent = #{record.answercontent,jdbcType=VARCHAR},
+    orgCode = #{record.orgcode,jdbcType=VARCHAR},
+    companyId = #{record.companyid,jdbcType=BIGINT},
+    yaoyuetitle = #{record.yaoyuetitle,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.manage.model.yaoRecord" >
+    update yaoyue_record
+    <set >
+      <if test="visitdate != null" >
+        visitDate = #{visitdate,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null" >
+        userId = #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="reason != null" >
+        reason = #{reason,jdbcType=VARCHAR},
+      </if>
+      <if test="cstatus != null" >
+        cstatus = #{cstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="enddate != null" >
+        endDate = #{enddate,jdbcType=VARCHAR},
+      </if>
+      <if test="answercontent != null" >
+        answerContent = #{answercontent,jdbcType=VARCHAR},
+      </if>
+      <if test="orgcode != null" >
+        orgCode = #{orgcode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null" >
+        companyId = #{companyid,jdbcType=BIGINT},
+      </if>
+      <if test="yaoyuetitle != null" >
+        yaoyuetitle = #{yaoyuetitle,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.manage.model.yaoRecord" >
+    update yaoyue_record
+    set visitDate = #{visitdate,jdbcType=VARCHAR},
+      userId = #{userid,jdbcType=VARCHAR},
+      reason = #{reason,jdbcType=VARCHAR},
+      cstatus = #{cstatus,jdbcType=VARCHAR},
+      endDate = #{enddate,jdbcType=VARCHAR},
+      answerContent = #{answercontent,jdbcType=VARCHAR},
+      orgCode = #{orgcode,jdbcType=VARCHAR},
+      companyId = #{companyid,jdbcType=BIGINT},
+      yaoyuetitle = #{yaoyuetitle,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findByPage"   resultType="com.manage.model.yaoRecord">
+    select * from yaoyue_record order by endDate desc
+  </select>
+</mapper>
